@@ -57,6 +57,7 @@ payload:
   - DOMAIN-SUFFIX,wireshark.org
   - DOMAIN-SUFFIX,sun-panel.top
   - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN-SUFFIX,dytt-img.com
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
