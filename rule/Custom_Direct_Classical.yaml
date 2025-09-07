@@ -64,6 +64,8 @@ payload:
   - DOMAIN-SUFFIX,6.66jc.top
   - DOMAIN-SUFFIX,whtjdasha.com
   - DOMAIN-SUFFIX,iconify.design
+  - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN-SUFFIX,simplesvg.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   
