@@ -62,6 +62,8 @@ payload:
   - DOMAIN-SUFFIX,yuneu.com
   - DOMAIN-SUFFIX,zzyhh.top
   - DOMAIN-SUFFIX,cloudflare.com
+  - DOMAIN-SUFFIX,cookielaw.org
+  
   - IP-CIDR,220.130.197.210/32,no-resolve
   
   - DOMAIN-KEYWORD,quickconnect
