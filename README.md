@@ -18,10 +18,10 @@ https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方�
 ```
 - ## 自用订阅模板地址
 - ### Custom_Clash.in
-#### [Github地址：](https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
+#### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
-https://raw.bgithub.xyz/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
+https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
 ```
 
 #### [直连地址：](https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini)
