@@ -3,6 +3,9 @@
 # Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Custom_Direct_Classical.yaml
 
 payload:
+  - DOMAIN-SUFFIX,docker.amingg.com
+  - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
+  - DOMAIN-SUFFIX,hub.rat.dev
   - DOMAIN-KEYWORD,dzmp4
   - DOMAIN-KEYWORD,exdys
   - DOMAIN-KEYWORD,domp4
@@ -55,6 +58,8 @@ payload:
   - DOMAIN-SUFFIX,dyg55.com
   - DOMAIN-SUFFIX,yuneu.com
   - DOMAIN-SUFFIX,zzyhh.top
+  - DOMAIN-SUFFIX,cloudflare.com
+  - DOMAIN-SUFFIX,cookielaw.org
   - DOMAIN-SUFFIX,jsdelivr.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
