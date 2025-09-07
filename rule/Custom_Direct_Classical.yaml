@@ -61,6 +61,7 @@ payload:
   - DOMAIN-SUFFIX,dyg55.com
   - DOMAIN-SUFFIX,yuneu.com
   - DOMAIN-SUFFIX,zzyhh.top
+  - DOMAIN-SUFFIX,cloudflare.com
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
