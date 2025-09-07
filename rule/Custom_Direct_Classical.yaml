@@ -63,6 +63,7 @@ payload:
   - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,6.66jc.top
   - DOMAIN-SUFFIX,whtjdasha.com
+  - DOMAIN-SUFFIX,iconify.design
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   
