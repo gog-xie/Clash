@@ -51,9 +51,6 @@ payload:
   - DOMAIN-SUFFIX,FamilyDS.com
   - DOMAIN-SUFFIX,FamilyDS.net
   - DOMAIN-SUFFIX,FamilyDS.org
-  - DOMAIN-SUFFIX,fastly.jsdelivr.net
-  - DOMAIN-SUFFIX,testingcf.jsdelivr.net
-  - DOMAIN-SUFFIX,cdn.jsdelivr.net
   - DOMAIN-SUFFIX,wireshark.org
   - DOMAIN-SUFFIX,sun-panel.top
   - DOMAIN-SUFFIX,unpkg.com
