@@ -55,6 +55,7 @@ payload:
   - DOMAIN-SUFFIX,testingcf.jsdelivr.net
   - DOMAIN-SUFFIX,cdn.jsdelivr.net
   - DOMAIN-SUFFIX,wireshark.org
+  - DOMAIN-SUFFIX,sun-panel.top
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
