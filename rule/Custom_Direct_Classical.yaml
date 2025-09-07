@@ -58,6 +58,7 @@ payload:
   - DOMAIN-SUFFIX,sun-panel.top
   - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,dytt-img.com
+  - DOMAIN-SUFFIX,dyg55.com
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
