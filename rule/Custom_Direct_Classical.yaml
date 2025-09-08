@@ -66,6 +66,7 @@ payload:
   - DOMAIN-SUFFIX,iconify.design
   - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,simplesvg.com
+  - DOMAIN-SUFFIX,omdbapi.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   
