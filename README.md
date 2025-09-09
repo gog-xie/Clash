@@ -9,7 +9,7 @@
 
 ---
 
-#### 曾用Openwrt旁路由科学上网，国内带宽只有直连带宽的2折，且使用时多有不便。其实家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，可以在硬路由或终端上安装相关软件。
+#### 曾用Openwrt旁路由科学上网，国内带宽相对直连带宽打了个2折，且使用多有不便。其实家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，可以在硬路由或终端上安装相关软件。
 
 ***
 
@@ -47,7 +47,7 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Smart.ini
 
 
 -  ## 其他系统订阅模板配置
-> * **PS：** 主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，稍加改动即可。配置好OpenClash后，下载Openclash的yaml配置订阅文件，将配置文件中rules的RULE-SET改为具体的规则数据（参照本项目的Custom_Direct_Classical.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入Windows Clash Verge、华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。
+> *  主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，稍加改动即可。配置好OpenClash后，下载Openclash的yaml配置订阅文件，将配置文件中rules的RULE-SET改为具体的规则数据（参照本项目的Custom_Direct_Classical.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入Windows Clash Verge、华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。
 <p align="center"> <b>替换RULE-SET规则集 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/RULE-SET.png" width="720" heiht="380"></div>
 
