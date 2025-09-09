@@ -69,6 +69,7 @@ payload:
   - DOMAIN-SUFFIX,omdbapi.com
   - DOMAIN-SUFFIX,adjust.com
   - DOMAIN-SUFFIX,asusgo.com
+  - DOMAIN-SUFFIX,bgithub.xyz
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
