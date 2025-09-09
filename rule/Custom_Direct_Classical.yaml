@@ -67,8 +67,10 @@ payload:
   - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,simplesvg.com
   - DOMAIN-SUFFIX,omdbapi.com
+  - DOMAIN-SUFFIX,adjust.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
+  - IP-CIDR,234.33.157.217/32,no-resolve
   
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,synology
