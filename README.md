@@ -2,8 +2,8 @@
 
 ---
 
-<p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件微改🚴‍♀️</b></p>
-<p align="center"><b>🐜根据个人上网习惯及机场特性微改，持续🐟漏网之鱼的维护补录🐜</b></p>
+<p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
+<p align="center"><b>🐜持续漏网之鱼🐟的维护补录🐜</b></p>
 <p align="center"><b>😂规则模板可拓展至Windows Clash Verge、MerlinClash等系统使用😂</b></p>
 <p align="center"><b>🙏🙏🙏 感谢Aethersailor大佬 🙏🙏🙏</b></p>
 
