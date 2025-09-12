@@ -70,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,adjust.com
   - DOMAIN-SUFFIX,asusgo.com
   - DOMAIN-SUFFIX,bgithub.xyz
+  - DOMAIN-SUFFIX,bxtv.3a.ink #（凤凰卫视）
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
