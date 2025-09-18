@@ -78,6 +78,9 @@ payload:
   - DOMAIN-SUFFIX,bittly.cc
   - DOMAIN-SUFFIX,fsdn.com
   - DOMAIN-SUFFIX,colorado.edu
+  - DOMAIN-SUFFIX,bitbucket.org
+  - DOMAIN-SUFFIX,shields.io
+  - DOMAIN-SUFFIX,trackerslist.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
