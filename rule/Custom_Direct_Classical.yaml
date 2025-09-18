@@ -5,7 +5,6 @@
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
-  - DOMAIN-SUFFIX,hub.rat.dev
   - DOMAIN-KEYWORD,dzmp4
   - DOMAIN-KEYWORD,exdys
   - DOMAIN-KEYWORD,domp4
@@ -53,7 +52,6 @@ payload:
   - DOMAIN-SUFFIX,FamilyDS.org
   - DOMAIN-SUFFIX,wireshark.org
   - DOMAIN-SUFFIX,sun-panel.top
-  - DOMAIN-SUFFIX,unpkg.com
   - DOMAIN-SUFFIX,dytt-img.com
   - DOMAIN-SUFFIX,dyg55.com
   - DOMAIN-SUFFIX,yuneu.com
