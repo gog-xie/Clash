@@ -86,6 +86,13 @@ payload:
   - DOMAIN-SUFFIX,bootcdn.net
   - DOMAIN-SUFFIX,tonkiang.us
   - DOMAIN-SUFFIX,download.clashverge.dev
+  - DOMAIN-SUFFIX,framer.com
+  - DOMAIN-SUFFIX,distro.so
+  - DOMAIN-SUFFIX,cloudinary.com
+  - DOMAIN-SUFFIX,screendesk.io
+  - DOMAIN-SUFFIX,debugbear.com
+  - DOMAIN-SUFFIX,rollbar.com
+  - DOMAIN-SUFFIX,dcztbhlive.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
