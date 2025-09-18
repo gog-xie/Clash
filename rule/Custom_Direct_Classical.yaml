@@ -72,6 +72,7 @@ payload:
   - DOMAIN-SUFFIX,bgithub.xyz
   - DOMAIN-SUFFIX,bxtv.3a.ink
   - DOMAIN-SUFFIX,85128.net
+  - DOMAIN-SUFFIX,51zmt.top
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
