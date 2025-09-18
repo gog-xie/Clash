@@ -81,6 +81,9 @@ payload:
   - DOMAIN-SUFFIX,bitbucket.org
   - DOMAIN-SUFFIX,shields.io
   - DOMAIN-SUFFIX,trackerslist.com
+  - DOMAIN-SUFFIX,gyssi.link
+  - DOMAIN-SUFFIX,gitlab.io
+  - DOMAIN-SUFFIX,bootcdn.net
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
