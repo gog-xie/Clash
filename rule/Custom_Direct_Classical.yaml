@@ -76,6 +76,7 @@ payload:
   - DOMAIN-SUFFIX,gstatic.cn
   - DOMAIN-SUFFIX,ipwho.is
   - DOMAIN-SUFFIX,bittly.cc
+  - DOMAIN-SUFFIX,fsdn.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
