@@ -1,6 +1,7 @@
-# 根据个人上网习惯收录的漏网之鱼直连列表
-# Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/My_Direct.yaml
-# Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
+# 根据个人上网习惯收录的漏网之鱼Direct列表
+# Aethersailor's Direct list：https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/refs/heads/main/rule/Custom_Direct_Classical.yaml
+# REPO: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/My_Direct.yaml
+# Direct REPO: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
 # TOTAL:92
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
