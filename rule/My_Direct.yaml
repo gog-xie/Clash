@@ -1,7 +1,7 @@
 # SOURCE: https://github.com/Aethersailor/Custom_OpenClash_Rules/blob/main/rule/Custom_Direct.list
 # Template Address: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/Custom_Direct_Classical.yaml
 # Direct Template Address: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/Custom_Direct_Classical.yaml
-
+# TOTAL:92
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
@@ -93,6 +93,5 @@ payload:
   - DOMAIN-SUFFIX,scyjd.com
   - DOMAIN-SUFFIX,unsplash.com
   - DOMAIN-SUFFIX,digicert.com
-  
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
