@@ -61,7 +61,8 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Smart.ini
 
 
 -  ## 其他系统订阅模板配置
-> *  主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，稍加改动即可。配置好OpenClash后，下载Openclash的yaml配置订阅文件，将配置文件中rules的RULE-SET改为具体的规则数据（参照Aethersailor大佬及本项目rule的Custom_Direct_Classical.yaml及My_Direct.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入Windows Clash Verge、华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。
+> *  主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
+> *  分两种情况，在Openclash配置订阅里，使用规则集选“禁用”时，openclash中配置好的yaml文件可直接下载导入Clash Verge或Merlinclash中使用。如果使用规则集选“启用”时，Openclash的yaml配置订阅文件需稍加修改，需要将OpenClash中的yaml配置文件中rules的RULE-SET改为具体的规则数据（参照Aethersailor大佬及本项目rule的Custom_Direct_Classical.yaml及My_Direct.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入Windows Clash Verge、华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。
 <p align="center"> <b>替换RULE-SET规则集 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/RULE-SET.png" width="720" heiht="380"></div>
 
