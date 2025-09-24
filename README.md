@@ -19,6 +19,12 @@
 https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-设置方案
 ```
 - ## 自用订阅模板地址
+  
+| 名称 | 适用内核 | 内容 | 
+|:-:|:-:|:-:|
+| Custom_Clash.ini | Meta | 本项目标准模板，推荐使用 |
+| Custom_Clash_Smart.ini | Smart | 本项目标准模板，推荐使用 |
+
 - ### Custom_Clash.in
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
