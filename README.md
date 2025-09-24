@@ -67,12 +67,12 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Smart.ini
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/%E8%A7%84%E5%88%99%E9%9B%86.png" width="720" heiht="380"></div>
 
 
-<p align="center"> <b>替换RULE-SET规则集 </b></p>
+<p align="center"> <b>启用规则集时需替换RULE-SET规则集 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/RULE-SET.png" width="720" heiht="380"></div>
 
 
 
-<p align="center"> <b>删除rule-providers规则集连接</b></p>
+<p align="center"> <b>启用规则集时需删除rule-providers规则集连接</b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/rule-providers.png" width="720" heiht="380"></div>
 
 
