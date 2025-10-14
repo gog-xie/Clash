@@ -2,10 +2,11 @@
 # Aethersailor's Direct list：https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/refs/heads/main/rule/Custom_Direct_Classical.yaml
 # REPO: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/My_Direct.yaml
 # Direct REPO: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
-# TOTAL:93
+# TOTAL:94
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
+  - DOMAIN-SUFFIX,dingtalk.com
   - DOMAIN-KEYWORD,dzmp4
   - DOMAIN-KEYWORD,exdys
   - DOMAIN-KEYWORD,domp4
