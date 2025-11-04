@@ -99,6 +99,7 @@ payload:
   - DOMAIN-SUFFIX,api.unisvg.com
   - DOMAIN-SUFFIX,cilixiong.org
   - DOMAIN-SUFFIX,rufus.ie
+  - DOMAIN-SUFFIX,friendlyelec.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
