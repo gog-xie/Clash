@@ -101,6 +101,8 @@ payload:
   - DOMAIN-SUFFIX,rufus.ie
   - DOMAIN-SUFFIX,friendlyelec.com
   - DOMAIN-SUFFIX,jumengfang.com
+  - DOMAIN-SUFFIX,cloudflareinsights.com
+  - DOMAIN-SUFFIX,hanxi.cc
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
