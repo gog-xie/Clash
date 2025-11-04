@@ -98,6 +98,7 @@ payload:
   - DOMAIN-SUFFIX,api.ipapi.is
   - DOMAIN-SUFFIX,api.unisvg.com
   - DOMAIN-SUFFIX,cilixiong.org
+  - DOMAIN-SUFFIX,rufus.ie
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
