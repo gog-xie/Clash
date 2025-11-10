@@ -106,6 +106,7 @@ payload:
   - DOMAIN-SUFFIX,jumengfang.com
   - DOMAIN-SUFFIX,cloudflareinsights.com
   - DOMAIN-SUFFIX,hanxi.cc
+  - DOMAIN-SUFFIX,immersivetranslate.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
