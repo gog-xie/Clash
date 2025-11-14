@@ -15,7 +15,7 @@ proxy-providers:
       additional-prefix: "[机场名称]"
 
 # ========================
-# 策略组定义
+# 策略组
 # ========================
 
 proxy-groups:
@@ -445,7 +445,7 @@ proxy-groups:
     filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
 
 # ========================
-# 业务分流组
+# 节点组
 # ========================
 
   # 香港组
@@ -465,7 +465,7 @@ proxy-groups:
     filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
     
   - name: 香港-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -489,7 +489,7 @@ proxy-groups:
     filter: "(?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
 
   - name: 美国-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -513,7 +513,7 @@ proxy-groups:
     filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
 
   - name: 日本-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -537,7 +537,7 @@ proxy-groups:
     filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
     
   - name: 台湾-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -561,7 +561,7 @@ proxy-groups:
     filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
     
   - name: 新加坡-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -585,7 +585,7 @@ proxy-groups:
     filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
     
   - name: 韩国-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -609,7 +609,7 @@ proxy-groups:
     filter: "(?=.*(AI)).*$"
     
   - name: GPT-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -633,7 +633,7 @@ proxy-groups:
     filter: "(?=.*(流媒体)).*$"
     
   - name: 流媒体-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -657,7 +657,7 @@ proxy-groups:
     filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
     
   - name: 其他地区-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -665,7 +665,7 @@ proxy-groups:
     filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
 
 # ========================
-# 规则引擎（rules）
+# 规则组
 # ========================
 rules:
 
