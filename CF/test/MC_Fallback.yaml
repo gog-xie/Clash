@@ -529,11 +529,13 @@ proxy-groups:
     proxies:
       - 台湾-手动
       - 台湾-自动
+      
   - name: 台湾-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
+    
   - name: 台湾-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
@@ -551,11 +553,13 @@ proxy-groups:
     proxies:
       - 新加坡-手动
       - 新加坡-自动
+      
   - name: 新加坡-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
+    
   - name: 新加坡-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
@@ -573,11 +577,13 @@ proxy-groups:
     proxies:
       - 韩国-手动
       - 韩国-自动
+      
   - name: 韩国-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
+    
   - name: 韩国-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
@@ -595,11 +601,13 @@ proxy-groups:
     proxies:
       - GPT-手动
       - GPT-自动
+      
   - name: GPT-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(AI)).*$"
+    
   - name: GPT-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
@@ -617,11 +625,13 @@ proxy-groups:
     proxies:
       - 流媒体-手动
       - 流媒体-自动
+      
   - name: 流媒体-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(流媒体)).*$"
+    
   - name: 流媒体-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
@@ -639,11 +649,13 @@ proxy-groups:
     proxies:
       - 其他地区-手动
       - 其他地区-自动
+      
   - name: 其他地区-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
+    
   - name: 其他地区-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/dashboard.png
     type: url-test
