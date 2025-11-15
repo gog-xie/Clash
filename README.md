@@ -5,11 +5,10 @@
 <p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录🐜</b></p>
 <p align="center"><b>😂规则模板可拓展至Windows Clash Verge、MerlinClash等系统使用😂</b></p>
-<p align="center"><b>🙏🙏🙏 感谢Aethersailor大佬 🙏🙏🙏</b></p>
 
 ---
 
-#### 曾用Openwrt旁路由科学上网，旁路由国内测速相对直连测速带宽打了个2折，且使用多有不便。其实家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，可以在硬路由或终端上安装相关插件。
+#### 曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，可以在硬路由或终端上安装相关插件。
 
 ***
 
