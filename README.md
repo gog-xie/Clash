@@ -46,7 +46,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Simple.ini
 ```
 
-- ### Custom_Clash_FallBack.ini
+- ### Custom_Clash_FallBack.ini（推荐）
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
 
 ```
