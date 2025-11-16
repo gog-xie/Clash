@@ -1,6 +1,7 @@
 # ========================
 # 端口
 # ========================
+
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -13,7 +14,6 @@ external-controller: 127.0.0.1:9090
 # ========================
 
 proxy-providers:
-
   机场名称:
     url: "机场订阅地址"
     type: http
@@ -28,7 +28,6 @@ proxy-providers:
       interval: 300
     proxy: 直连
 
-
 proxies:
   - {name: 直连, type: direct}
   - {name: 拒绝, type: reject}
@@ -38,7 +37,6 @@ proxies:
 # ========================
 
 proxy-groups:
-
   - name: 手动选择
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png"
     type: select
@@ -279,27 +277,6 @@ proxy-groups:
       - 全部自动
       - 全球直连
 
-  - name: Copilot
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"
-    type: select
-    proxies:
-      - 全球直连
-      - 香港-故转
-      - 香港-自动
-      - 美国-故转
-      - 美国-自动
-      - 日本-故转
-      - 日本-自动
-      - 新加坡-故转
-      - 新加坡-自动
-      - 台湾-故转
-      - 台湾-自动
-      - 韩国-故转
-      - 韩国-自动
-      - 其他-故转
-      - 其他-自动
-      - 全部自动
-
   - name: TikTok
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
     type: select
@@ -429,6 +406,27 @@ proxy-groups:
       - 其他-自动
       - 全部自动
       - 全球直连
+
+  - name: Copilot
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: 苹果服务
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
