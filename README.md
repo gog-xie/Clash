@@ -8,7 +8,7 @@
 
 ---
 
-#### 曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，可以在硬路由或终端上安装相关插件。
+#### 曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。
 
 ***
 
@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.ini
 ```
 
-#### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
+#### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
 #### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Fallback.yaml)
 
