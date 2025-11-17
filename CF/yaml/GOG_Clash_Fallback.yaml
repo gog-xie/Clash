@@ -20,7 +20,7 @@ proxy-providers:
     override:
       skip-cert-verify: true
       udp: true
-      filter: "^((?!(建议|如果|教程|导致|客户端)).)*$"  
+      filter: "^((?!(建议)).)*$"  
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
@@ -84,7 +84,7 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
@@ -92,7 +92,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
@@ -613,7 +613,7 @@ proxy-groups:
     proxies:
       - 全球直连
       - 全部自动
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议)).)*$"
 
   - name: 漏网之鱼
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
@@ -622,7 +622,7 @@ proxy-groups:
     proxies:
       - 全球直连
       - 全部自动
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议)).)*$"
 
 # ========================
 # 业务分流组
@@ -834,7 +834,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
-    filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|德国|Germany|柏林|法兰克福)).)*$"
+    filter: "^((?!(建议|港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|德国|Germany|柏林|法兰克福)).)*$"
 
   - name: 其他-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
@@ -842,7 +842,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|德国|Germany|柏林|法兰克福)).)*$"
+    filter: "^((?!(建议|港|HK|hk|Hong Kong|HongKong|hongkong|深港|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|纽约|US|United States|UnitedStates|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(?<!尼|-)日|JP|Japan|🇯🇵|新加坡|坡|狮城|SG|Singapore|台|新北|彰化|TW|Taiwan|KR|Korea|KOR|首尔|韩|韓|加拿大|Canada|渥太华|温哥华|卡尔加里|德国|Germany|柏林|法兰克福)).)*$"
 
 # ========================
 # 规则组
