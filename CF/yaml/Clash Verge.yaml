@@ -22,7 +22,7 @@ proxy-providers:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 300
-      filter: "^((?!(建议|如果|教程|导致|客户端)).)*$"  ##此项是在订阅转换机场节点时，需排除你不需要的节点，通常都是限速节点，填关键字即可，如0.1X、0.5X等，下类同
+      filter: "^((?!(建议|0.1X|0.5X)).)*$"  ##此项是在订阅转换机场节点时，需排除你不需要的节点，通常都是限速节点，填关键字即可，如0.1X、0.5X等，下类同
 
 
 # ========================
@@ -46,7 +46,7 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议|0.1X|0.5X)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
@@ -55,7 +55,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    filter: "^((?!(建议|0.1X|0.5X)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
