@@ -41,8 +41,8 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.20.0.1/16
   nameserver:
-    - 218.6.200.139
-    - 202.98.96.68
+    - 223.5.5.5
+#（可填写当地运营商DNS）
   fake-ip-filter:
     - +.lan
     - +.local
