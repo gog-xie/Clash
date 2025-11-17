@@ -42,7 +42,7 @@ dns:
   fake-ip-range: 198.20.0.1/16
   nameserver:
     - 223.5.5.5
-#（可填写当地运营商DNS）
+#（可填写当地运营商DNS，如四川电信DNS：218.6.200.139和202.98.96.68）
   fake-ip-filter:
     - +.lan
     - +.local
