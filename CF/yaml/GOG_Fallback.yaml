@@ -12,7 +12,6 @@ external-controller: 127.0.0.1:9090
 # ========================
 # 机场订阅
 # ========================
-
 proxy-providers:
   机场名称:
     url: "机场订阅地址"
@@ -31,6 +30,43 @@ proxy-providers:
 proxies:
   - {name: 直连, type: direct}
   - {name: 拒绝, type: reject}
+
+# ========================
+# DNS 设置
+# ========================
+dns:
+  enable: true
+  listen: 0.0.0.0:7874
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.20.0.1/16
+  nameserver:
+    - 218.6.200.139
+    - 202.98.96.68
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - geosite:cn
+    - +.ifaner.dd94wan.com
+
+ipv6: true
+
+# ========================
+# TUN 模块
+# ========================
+tun:
+  enable: true
+  stack: gvisor
+  device: utun
+  endpoint-independent-nat: true
+  auto-route: false
+  auto-detect-interface: false
+  auto-redirect: false
+  strict-route: false
+
+profile:
+  store-selected: true
+  store-fake-ip: true
 
 # ========================
 # 策略组
