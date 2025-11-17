@@ -1,15 +1,13 @@
 port: 3333
-proxies:
-  - {name: 全球直连, type: direct}
-  - {name: 拒绝, type: reject}
-proxy-providers:
+
+机场名称:
   iFarcloud:
     type: http
     url: https://oooooooooooooolt?clash=1&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: http://www.apple.com/library/test/success.html
       interval: 300
     override:
       additional-prefix: "[机场名称]"
@@ -19,19 +17,28 @@ proxy-providers:
 # ========================
 
 proxy-groups:
-
   - name: 手动选择
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png"
     type: select
     include-all: true
     proxies:
-      - 自动选择
+      - 全部自动
       - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 台湾-自动
+      - 新加坡-自动
+      - 韩国-自动
+      - 流媒体-自动
+      - GPT-自动
+      - 其他-自动
     filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
 
-  - name: 自动选择
+  - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -41,399 +48,513 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: YouTube
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: 谷歌FCM
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: 谷歌服务
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: ChatGPT
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
     type: select
     proxies:
-    - GPT-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - GPT-故转
+      - GPT-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: AI服务
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png"
     type: select
     proxies:
-    - GPT-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: TikTok
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
-    type: select
-    proxies:
-    - 新加坡-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: Netflix
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
-    type: select
-    proxies:
-    - 流媒体-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: DisneyPlus
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png"
-    type: select
-    proxies:
-    - 流媒体-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: HBO
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"
-    type: select
-    proxies:
-    - 流媒体-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: PrimeVideo
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video_1.png"
-    type: select
-    proxies:
-    - 流媒体-故转
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: Spotify
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
-    type: select
-    proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: 即时通讯
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png"
-    type: select
-    proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
-
-  - name: 社交媒体
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/talkatone.png"
-    type: select
-    proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - GPT-故转
+      - GPT-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: 国外媒体
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/meta.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/stash.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: 国外电商
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png"
     type: select
     proxies:
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
-    - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: 即时通讯
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: 社交媒体
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/talkatone.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: TikTok
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+    type: select
+    proxies:
+      - 新加坡-故转
+      - 新加坡-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: Netflix
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: DisneyPlus
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: HBO
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: PrimeVideo
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video_1.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
+
+  - name: Spotify
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
+      - 全球直连
 
   - name: Copilot
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - GPT-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: 苹果服务
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: AppleTV+
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: Emby
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/emby.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 流媒体-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: Steam
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/steam.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: 微软服务
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/microsoft-icon.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: 游戏平台
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
     type: select
     proxies:
-    - 全球直连
-    - 香港-故转
-    - 美国-故转
-    - 台湾-故转
-    - 日本-故转
-    - 新加坡-故转
-    - 韩国-故转
-    - 其他地区-故转
-    - 手动选择
-    - 自动选择
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 其他-故转
+      - 其他-自动
+      - 全部自动
 
   - name: Bahamut
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png"
     type: select
     proxies:
-    - 全球直连
-    - 台湾-故转
-    - 手动选择
-
+      - 全球直连
+      - 台湾-故转
+      - 手动选择
 
   - name: 非标端口
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png"
     type: select
     proxies:
-    - 全球直连
-    - 手动选择
-    - 遵循规则
+      - 全球直连
+      - 漏网之鱼
 
-  - name: 遵循规则
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
+  - name: 全球直连
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
     type: select
     proxies:
-    - 漏网之鱼
-
-  - name: 漏网之鱼
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
-    type: select
-    include-all: true
-    proxies:
-    - 全球直连
-    - 自动选择
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+    - DIRECT
 
   - name: 测速工具
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
@@ -441,17 +562,27 @@ proxy-groups:
     include-all: true
     proxies:
       - 全球直连
-      - 自动选择
+      - 全部自动
+    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
+
+  - name: 漏网之鱼
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全球直连
+      - 全部自动
     filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
 
 # ========================
-# 节点组
+# 业务分流组
 # ========================
 
   # 香港组
   - name: 香港-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -467,6 +598,7 @@ proxy-groups:
   - name: 香港-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -476,6 +608,7 @@ proxy-groups:
   - name: 美国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -491,6 +624,7 @@ proxy-groups:
   - name: 美国-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -500,6 +634,7 @@ proxy-groups:
   - name: 日本-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -515,6 +650,7 @@ proxy-groups:
   - name: 日本-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -524,21 +660,23 @@ proxy-groups:
   - name: 台湾-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
       - 台湾-手动
       - 台湾-自动
-      
+
   - name: 台湾-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
-    
+
   - name: 台湾-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -548,21 +686,23 @@ proxy-groups:
   - name: 新加坡-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
       - 新加坡-手动
       - 新加坡-自动
-      
+
   - name: 新加坡-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
-    
+
   - name: 新加坡-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -572,21 +712,23 @@ proxy-groups:
   - name: 韩国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
       - 韩国-手动
       - 韩国-自动
-      
+
   - name: 韩国-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
-    
+
   - name: 韩国-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -596,21 +738,23 @@ proxy-groups:
   - name: GPT-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
       - GPT-手动
       - GPT-自动
-      
+
   - name: GPT-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(AI)).*$"
-    
+
   - name: GPT-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -620,45 +764,48 @@ proxy-groups:
   - name: 流媒体-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
       - 流媒体-手动
       - 流媒体-自动
-      
+
   - name: 流媒体-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "(?=.*(流媒体)).*$"
-    
+
   - name: 流媒体-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
     filter: "(?=.*(流媒体)).*$"
 
   # 其他地区组
-  - name: 其他地区-故转
+  - name: 其他-故转
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/earth-setting.png"
     type: fallback
     interval: 300
     lazy: false
     proxies:
-      - 其他地区-手动
-      - 其他地区-自动
-      
-  - name: 其他地区-手动
+      - 其他-手动
+      - 其他-自动
+
+  - name: 其他-手动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
     type: select
     include-all: true
     filter: "^((?!(建议|如果|教程|导致|客户端|直连|拒绝|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
-    
-  - name: 其他地区-自动
+
+  - name: 其他-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -667,436 +814,16 @@ proxy-groups:
 # ========================
 # 规则组
 # ========================
-rules:
 
-  - DOMAIN-KEYWORD,gogxie,全球直连
-  - DOMAIN-SUFFIX,gogxie.dsmynas.com,全球直连
+rules:
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
-
-##- RULE-SET,My_Direct,全球直连
-  - DOMAIN-SUFFIX,docker.amingg.com,全球直连
-  - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run,全球直连
-  - DOMAIN-KEYWORD,dzmp4,全球直连
-  - DOMAIN-KEYWORD,exdys,全球直连
-  - DOMAIN-KEYWORD,domp4,全球直连
-  - DOMAIN-KEYWORD,ddmp4,全球直连
-  - DOMAIN-KEYWORD,xwyue,全球直连
-  - DOMAIN-KEYWORD,upyunso,全球直连
-  - DOMAIN-SUFFIX,js.pusher.com,全球直连
-  - DOMAIN-SUFFIX,jianpian.vip,全球直连
-  - DOMAIN-SUFFIX,potplayercn.com,全球直连
-  - DOMAIN-SUFFIX,sourceforge.net,全球直连
-  - DOMAIN-KEYWORD,istoreos,全球直连
-  - DOMAIN-KEYWORD,gogxie,全球直连
-  - DOMAIN-SUFFIX,dytt8899.com,全球直连
-  - DOMAIN-KEYWORD,yinfans,全球直连
-  - DOMAIN-SUFFIX,playwoool.com,全球直连
-  - DOMAIN-SUFFIX,scorecardresearch.com,全球直连
-  - DOMAIN-SUFFIX,dydytt.net,全球直连
-  - DOMAIN-KEYWORD,XL720,全球直连
-  - DOMAIN-KEYWORD,cupfox,全球直连
-  - DOMAIN-KEYWORD,xiaobaovod,全球直连
-  - DOMAIN-KEYWORD,HW8,全球直连
-  - DOMAIN-KEYWORD,huawei8,全球直连
-  - DOMAIN-KEYWORD,plex,全球直连
-  - DOMAIN-KEYWORD,xiaoya,全球直连
-  - DOMAIN-KEYWORD,proxmox,全球直连
-  - DOMAIN-SUFFIX,fanart.tv,全球直连
-  - DOMAIN-KEYWORD,aliyundrive,全球直连
-  - DOMAIN-SUFFIX,wallpaperswide.com,全球直连
-  - DOMAIN-SUFFIX,emojiterra.com,全球直连
-  - DOMAIN-SUFFIX,draw.io,全球直连
-  - DOMAIN-SUFFIX,app.diagrams.net,全球直连
-  - DOMAIN-SUFFIX,btsj6.com,全球直连
-  - DOMAIN-KEYWORD,btsj6,全球直连
-  - DOMAIN-SUFFIX,dyg5.com,全球直连
-  - DOMAIN-SUFFIX,synology.me,全球直连
-  - DOMAIN-SUFFIX,DiskStation.me,全球直连
-  - DOMAIN-SUFFIX,i234.me,全球直连
-  - DOMAIN-SUFFIX,DSCloud.biz,全球直连
-  - DOMAIN-SUFFIX,DSCloud.mobi,全球直连
-  - DOMAIN-SUFFIX,DSmyNAS.com,全球直连
-  - DOMAIN-SUFFIX,DSmyNAS.net,全球直连
-  - DOMAIN-SUFFIX,DSmyNAS.org,全球直连
-  - DOMAIN-SUFFIX,FamilyDS.com,全球直连
-  - DOMAIN-SUFFIX,FamilyDS.net,全球直连
-  - DOMAIN-SUFFIX,FamilyDS.org,全球直连
-  - DOMAIN-SUFFIX,wireshark.org,全球直连
-  - DOMAIN-SUFFIX,sun-panel.top,全球直连
-  - DOMAIN-SUFFIX,dytt-img.com,全球直连
-  - DOMAIN-SUFFIX,dyg55.com,全球直连
-  - DOMAIN-SUFFIX,yuneu.com,全球直连
-  - DOMAIN-SUFFIX,zzyhh.top,全球直连
-  - DOMAIN-SUFFIX,cloudflare.com,全球直连
-  - DOMAIN-SUFFIX,cookielaw.org,全球直连
-  - DOMAIN-SUFFIX,jsdelivr.com,全球直连
-  - DOMAIN-SUFFIX,6.66jc.top,全球直连
-  - DOMAIN-SUFFIX,whtjdasha.com,全球直连
-  - DOMAIN-SUFFIX,iconify.design,全球直连
-  - DOMAIN-SUFFIX,unpkg.com,全球直连
-  - DOMAIN-SUFFIX,simplesvg.com,全球直连
-  - DOMAIN-SUFFIX,omdbapi.com,全球直连
-  - DOMAIN-SUFFIX,adjust.com,全球直连
-  - DOMAIN-SUFFIX,asusgo.com,全球直连
-  - DOMAIN-SUFFIX,bgithub.xyz,全球直连
-  - DOMAIN-SUFFIX,bxtv.3a.ink,全球直连
-  - DOMAIN-SUFFIX,85128.net,全球直连
-  - DOMAIN-SUFFIX,gstatic.cn,全球直连
-  - DOMAIN-SUFFIX,ipwho.is,全球直连
-  - DOMAIN-SUFFIX,bittly.cc,全球直连
-  - DOMAIN-SUFFIX,fsdn.com,全球直连
-  - DOMAIN-SUFFIX,colorado.edu,全球直连
-  - DOMAIN-SUFFIX,bitbucket.org,全球直连
-  - DOMAIN-SUFFIX,shields.io,全球直连
-  - DOMAIN-SUFFIX,trackerslist.com,全球直连
-  - DOMAIN-SUFFIX,gyssi.link,全球直连
-  - DOMAIN-SUFFIX,gitlab.io,全球直连
-  - DOMAIN-SUFFIX,bootcdn.net,全球直连
-  - DOMAIN-SUFFIX,tonkiang.us,全球直连
-  - DOMAIN-SUFFIX,download.clashverge.dev,全球直连
-  - DOMAIN-SUFFIX,framer.com,全球直连
-  - DOMAIN-SUFFIX,distro.so,全球直连
-  - DOMAIN-SUFFIX,cloudinary.com,全球直连
-  - DOMAIN-SUFFIX,screendesk.io,全球直连
-  - DOMAIN-SUFFIX,debugbear.com,全球直连
-  - DOMAIN-SUFFIX,rollbar.com,全球直连
-  - DOMAIN-SUFFIX,dcztbhlive.com,全球直连
-  - DOMAIN-SUFFIX,scyjd.com,全球直连
-  - DOMAIN-SUFFIX,unsplash.com,全球直连
-  - DOMAIN-SUFFIX,digicert.com,全球直连
-  - DOMAIN-SUFFIX,api.ipapi.is,全球直连
-  - IP-CIDR,220.130.197.210/32,全球直连,no-resolve
-  - IP-CIDR,234.33.157.217/32,全球直连,no-resolve
-
-##- RULE-SET,Custom_Direct_Classical,全球直连
-  - DOMAIN-KEYWORD,m-team,全球直连
-  - DOMAIN-KEYWORD,quickconnect,全球直连
-  - DOMAIN-KEYWORD,synology,全球直连
-  - DOMAIN-SUFFIX,03241119.xyz,全球直连
-  - DOMAIN-SUFFIX,112114.xyz,全球直连
-  - DOMAIN-SUFFIX,115cdn.de,全球直连
-  - DOMAIN-SUFFIX,1996999.xyz,全球直连
-  - DOMAIN-SUFFIX,204cloud.com,全球直连
-  - DOMAIN-SUFFIX,51wanxue.com,全球直连
-  - DOMAIN-SUFFIX,51zmt.top,全球直连
-  - DOMAIN-SUFFIX,52jiawei.com,全球直连
-  - DOMAIN-SUFFIX,52met.com,全球直连
-  - DOMAIN-SUFFIX,52muban.com,全球直连
-  - DOMAIN-SUFFIX,657192.com,全球直连
-  - DOMAIN-SUFFIX,737698.xyz,全球直连
-  - DOMAIN-SUFFIX,7sef.com,全球直连
-  - DOMAIN-SUFFIX,900cha.com,全球直连
-  - DOMAIN-SUFFIX,985hezi.com,全球直连
-  - DOMAIN-SUFFIX,998tool.com,全球直连
-  - DOMAIN-SUFFIX,adobe.com,全球直连
-  - DOMAIN-SUFFIX,afeica.com,全球直连
-  - DOMAIN-SUFFIX,afuns.me,全球直连
-  - DOMAIN-SUFFIX,aistudio-app.com,全球直连
-  - DOMAIN-SUFFIX,akamaihd.net,全球直连
-  - DOMAIN-SUFFIX,aloys233.top,全球直连
-  - DOMAIN-SUFFIX,anycubic.com,全球直连
-  - DOMAIN-SUFFIX,api.myip.com,全球直连
-  - DOMAIN-SUFFIX,armvm.com,全球直连
-  - DOMAIN-SUFFIX,baiyishequ.com,全球直连
-  - DOMAIN-SUFFIX,bangumi.tv,全球直连
-  - DOMAIN-SUFFIX,bdcb.cc,全球直连
-  - DOMAIN-SUFFIX,belimked.com,全球直连
-  - DOMAIN-SUFFIX,bgm.tv,全球直连
-  - DOMAIN-SUFFIX,bochk.com,全球直连
-  - DOMAIN-SUFFIX,bsbsb.top,全球直连
-  - DOMAIN-SUFFIX,canghaiip.com,全球直连
-  - DOMAIN-SUFFIX,centbrowser.net,全球直连
-  - DOMAIN-SUFFIX,cg3da.com,全球直连
-  - DOMAIN-SUFFIX,chaxunjiao.com,全球直连
-  - DOMAIN-SUFFIX,chaz.fun,全球直连
-  - DOMAIN-SUFFIX,checkip.dyndns.org,全球直连
-  - DOMAIN-SUFFIX,checkipv6.dyndns.org,全球直连
-  - DOMAIN-SUFFIX,chenyuxia.com,全球直连
-  - DOMAIN-SUFFIX,chii.in,全球直连
-  - DOMAIN-SUFFIX,chujingapp.com,全球直连
-  - DOMAIN-SUFFIX,clivia.fun,全球直连
-  - DOMAIN-SUFFIX,cn-music.mefun.vip,全球直连
-  - DOMAIN-SUFFIX,codeloop.top,全球直连
-  - DOMAIN-SUFFIX,congmiqq.com,全球直连
-  - DOMAIN-SUFFIX,coros.com,全球直连
-  - DOMAIN-SUFFIX,crtyhr.com,全球直连
-  - DOMAIN-SUFFIX,dcgstd.com,全球直连
-  - DOMAIN-SUFFIX,ddsrem.com,全球直连
-  - DOMAIN-SUFFIX,ddzn.tech,全球直连
-  - DOMAIN-SUFFIX,dell.com,全球直连
-  - DOMAIN-SUFFIX,dhub.kubesre.xyz,全球直连
-  - DOMAIN-SUFFIX,dingdingzn.com,全球直连
-  - DOMAIN-SUFFIX,docker.1panel.live,全球直连
-  - DOMAIN-SUFFIX,docker.kejilion.pro,全球直连
-  - DOMAIN-SUFFIX,docker.unsee.tech,全球直连
-  - DOMAIN-SUFFIX,dockerpull.org,全球直连
-  - DOMAIN-SUFFIX,dockerpull.pw,全球直连
-  - DOMAIN-SUFFIX,dothantech.com,全球直连
-  - DOMAIN-SUFFIX,douqq.com,全球直连
-  - DOMAIN-SUFFIX,dushe1.app,全球直连
-  - DOMAIN-SUFFIX,einfo-tech.com,全球直连
-  - DOMAIN-SUFFIX,englibrary.com,全球直连
-  - DOMAIN-SUFFIX,epg.aptv.app,全球直连
-  - DOMAIN-SUFFIX,epg.v1.mk,全球直连
-  - DOMAIN-SUFFIX,feihengip.com,全球直连
-  - DOMAIN-SUFFIX,feizhiyi.com,全球直连
-  - DOMAIN-SUFFIX,ffhome.com,全球直连
-  - DOMAIN-SUFFIX,fjpit.com,全球直连
-  - DOMAIN-SUFFIX,flingtrainer.com,全球直连
-  - DOMAIN-SUFFIX,fofuai.com,全球直连
-  - DOMAIN-SUFFIX,fowep.com,全球直连
-  - DOMAIN-SUFFIX,freetv.top,全球直连
-  - DOMAIN-SUFFIX,frp-ski.com,全球直连
-  - DOMAIN-SUFFIX,fssbcc.top,全球直连
-  - DOMAIN-SUFFIX,fsytss.com,全球直连
-  - DOMAIN-SUFFIX,fzwqq.com,全球直连
-  - DOMAIN-SUFFIX,gaishitongshu.com,全球直连
-  - DOMAIN-SUFFIX,game.maj-soul.com,全球直连
-  - DOMAIN-SUFFIX,gaojiua.com,全球直连
-  - DOMAIN-SUFFIX,gdcucc.v1.mk,全球直连
-  - DOMAIN-SUFFIX,geektool.top,全球直连
-  - DOMAIN-SUFFIX,ggbond.org,全球直连
-  - DOMAIN-SUFFIX,gh-proxy.com,全球直连
-  - DOMAIN-SUFFIX,gh.con.sh,全球直连
-  - DOMAIN-SUFFIX,gh.ddlc.top,全球直连
-  - DOMAIN-SUFFIX,gh.llkk.cc,全球直连
-  - DOMAIN-SUFFIX,ghfast.top,全球直连
-  - DOMAIN-SUFFIX,ghp.ci,全球直连
-  - DOMAIN-SUFFIX,ghproxy.cc,全球直连
-  - DOMAIN-SUFFIX,ghproxy.cfd,全球直连
-  - DOMAIN-SUFFIX,ghps.cc,全球直连
-  - DOMAIN-SUFFIX,girigirilove.com,全球直连
-  - DOMAIN-SUFFIX,git.886.be,全球直连
-  - DOMAIN-SUFFIX,github.abskoop.workers.dev,全球直连
-  - DOMAIN-SUFFIX,github.boki.moe,全球直连
-  - DOMAIN-SUFFIX,github.moeyy.xyz,全球直连
-  - DOMAIN-SUFFIX,github.site,全球直连
-  - DOMAIN-SUFFIX,github.store,全球直连
-  - DOMAIN-SUFFIX,giveup.top,全球直连
-  - DOMAIN-SUFFIX,gjtool.com,全球直连
-  - DOMAIN-SUFFIX,gmya.net,全球直连
-  - DOMAIN-SUFFIX,goka.top,全球直连
-  - DOMAIN-SUFFIX,googoc.com,全球直连
-  - DOMAIN-SUFFIX,gseen.com,全球直连
-  - DOMAIN-SUFFIX,gsgltz.com,全球直连
-  - DOMAIN-SUFFIX,gsjkjt.com,全球直连
-  - DOMAIN-SUFFIX,gsnhcg.com,全球直连
-  - DOMAIN-SUFFIX,gsstic.com,全球直连
-  - DOMAIN-SUFFIX,gxnnjidingkeji.top,全球直连
-  - DOMAIN-SUFFIX,gzybao.com,全球直连
-  - DOMAIN-SUFFIX,halvie.com,全球直连
-  - DOMAIN-SUFFIX,hbcof.com,全球直连
-  - DOMAIN-SUFFIX,hbctic.com,全球直连
-  - DOMAIN-SUFFIX,hexiny.com,全球直连
-  - DOMAIN-SUFFIX,hf-mirror.com,全球直连
-  - DOMAIN-SUFFIX,hnxzctec.com,全球直连
-  - DOMAIN-SUFFIX,hsbc.com.hk,全球直连
-  - DOMAIN-SUFFIX,hstbroker.com,全球直连
-  - DOMAIN-SUFFIX,hszq6.com,全球直连
-  - DOMAIN-SUFFIX,hub.crdz.gq,全球直连
-  - DOMAIN-SUFFIX,hub.gitmirror.com,全球直连
-  - DOMAIN-SUFFIX,hub.rat.dev,全球直连
-  - DOMAIN-SUFFIX,hub.xdark.top,全球直连
-  - DOMAIN-SUFFIX,huikao8.com,全球直连
-  - DOMAIN-SUFFIX,hwbim.com,全球直连
-  - DOMAIN-SUFFIX,icvcs.com,全球直连
-  - DOMAIN-SUFFIX,idsduf.com,全球直连
-  - DOMAIN-SUFFIX,ifconfig.co,全球直连
-  - DOMAIN-SUFFIX,ifish7.com,全球直连
-  - DOMAIN-SUFFIX,igpsport.com,全球直连
-  - DOMAIN-SUFFIX,imacos.top,全球直连
-  - DOMAIN-SUFFIX,immortalwrt.org,全球直连
-  - DOMAIN-SUFFIX,iotrix.net,全球直连
-  - DOMAIN-SUFFIX,ip159.com,全球直连
-  - DOMAIN-SUFFIX,ip6.seeip.org,全球直连
-  - DOMAIN-SUFFIX,ipapi.co,全球直连
-  - DOMAIN-SUFFIX,ipinfo.io,全球直连
-  - DOMAIN-SUFFIX,ipshu.com,全球直连
-  - DOMAIN-SUFFIX,istoreos.com,全球直连
-  - DOMAIN-SUFFIX,jsdelivr.net,全球直连
-  - DOMAIN-SUFFIX,jxjktzjt.com,全球直连
-  - DOMAIN-SUFFIX,jxpp.com,全球直连
-  - DOMAIN-SUFFIX,kaspersky-labs.com,全球直连
-  - DOMAIN-SUFFIX,kaspersky.com,全球直连
-  - DOMAIN-SUFFIX,keyoo.com,全球直连
-  - DOMAIN-SUFFIX,kgithub.com,全球直连
-  - DOMAIN-SUFFIX,kit327.com,全球直连
-  - DOMAIN-SUFFIX,kmeila.com,全球直连
-  - DOMAIN-SUFFIX,kuaicha888.com,全球直连
-  - DOMAIN-SUFFIX,kyarucloud.moe,全球直连
-  - DOMAIN-SUFFIX,lanyun.net,全球直连
-  - DOMAIN-SUFFIX,leelen.com,全球直连
-  - DOMAIN-SUFFIX,letaoedu.com,全球直连
-  - DOMAIN-SUFFIX,longmenshuju.com,全球直连
-  - DOMAIN-SUFFIX,lsbj365.com,全球直连
-  - DOMAIN-SUFFIX,lyihub.com,全球直连
-  - DOMAIN-SUFFIX,lyilife.com,全球直连
-  - DOMAIN-SUFFIX,m-team.cc,全球直连
-  - DOMAIN-SUFFIX,m-team.io,全球直连
-  - DOMAIN-SUFFIX,manfuz.co,全球直连
-  - DOMAIN-SUFFIX,mc-user.com,全球直连
-  - DOMAIN-SUFFIX,meishiffx.online,全球直连
-  - DOMAIN-SUFFIX,members.3322.org,全球直连
-  - DOMAIN-SUFFIX,micu.hk,全球直连
-  - DOMAIN-SUFFIX,mifeng.plus,全球直连
-  - DOMAIN-SUFFIX,mobai.sbs,全球直连
-  - DOMAIN-SUFFIX,msftconnecttest.com,全球直连
-  - DOMAIN-SUFFIX,msftncsi.com,全球直连
-  - DOMAIN-SUFFIX,mslmc.net,全球直连
-  - DOMAIN-SUFFIX,mtaokj.com,全球直连
-  - DOMAIN-SUFFIX,mykuaidi.com,全球直连
-  - DOMAIN-SUFFIX,myshopex.com,全球直连
-  - DOMAIN-SUFFIX,naixi.com,全球直连
-  - DOMAIN-SUFFIX,neihang.net,全球直连
-  - DOMAIN-SUFFIX,netzz.net,全球直连
-  - DOMAIN-SUFFIX,nhk.or.jp,全球直连
-  - DOMAIN-SUFFIX,nn.ci,全球直连
-  - DOMAIN-SUFFIX,nxog.top,全球直连
-  - DOMAIN-SUFFIX,oceando.cloud,全球直连
-  - DOMAIN-SUFFIX,ok321.top,全球直连
-  - DOMAIN-SUFFIX,onebuygz.com,全球直连
-  - DOMAIN-SUFFIX,ottai.com,全球直连
-  - DOMAIN-SUFFIX,paperang.com,全球直连
-  - DOMAIN-SUFFIX,plusde1.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plushk1.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plushk2.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plushk3.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plusjp1.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plusus1.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plusus2.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,plusus3.younoyes.com,全球直连
-  - DOMAIN-SUFFIX,pool.ntp.org,全球直连
-  - DOMAIN-SUFFIX,powershellgallery.com,全球直连
-  - DOMAIN-SUFFIX,privateapi.xyz,全球直连
-  - DOMAIN-SUFFIX,ptl.gs,全球直连
-  - DOMAIN-SUFFIX,ptlgs.org,全球直连
-  - DOMAIN-SUFFIX,qiankunshopping.com,全球直连
-  - DOMAIN-SUFFIX,qianuni.com,全球直连
-  - DOMAIN-SUFFIX,qiaoxuesi.com,全球直连
-  - DOMAIN-SUFFIX,qinglue.com,全球直连
-  - DOMAIN-SUFFIX,redenmc.com,全球直连
-  - DOMAIN-SUFFIX,registry.dockermirror.com,全球直连
-  - DOMAIN-SUFFIX,rewards.bing.com,全球直连
-  - DOMAIN-SUFFIX,rsfcxq.com,全球直连
-  - DOMAIN-SUFFIX,sanligu.top,全球直连
-  - DOMAIN-SUFFIX,sapphiretech.com,全球直连
-  - DOMAIN-SUFFIX,scbaijia.com,全球直连
-  - DOMAIN-SUFFIX,seaflysoft.com,全球直连
-  - DOMAIN-SUFFIX,seedpace.com,全球直连
-  - DOMAIN-SUFFIX,sgtv.ii00.cc,全球直连
-  - DOMAIN-SUFFIX,shuqiandiqiu.com,全球直连
-  - DOMAIN-SUFFIX,sixloy428.top,全球直连
-  - DOMAIN-SUFFIX,sksight.com,全球直连
-  - DOMAIN-SUFFIX,snfox.com,全球直连
-  - DOMAIN-SUFFIX,snltty.com,全球直连
-  - DOMAIN-SUFFIX,sptv.ii00.cc,全球直连
-  - DOMAIN-SUFFIX,starlink.uno,全球直连
-  - DOMAIN-SUFFIX,suyur.com,全球直连
-  - DOMAIN-SUFFIX,sxlljm.com,全球直连
-  - DOMAIN-SUFFIX,tailgdd.com,全球直连
-  - DOMAIN-SUFFIX,tangguobaohe.com,全球直连
-  - DOMAIN-SUFFIX,tclai.top,全球直连
-  - DOMAIN-SUFFIX,tcp.pub,全球直连
-  - DOMAIN-SUFFIX,tcp5.com,全球直连
-  - DOMAIN-SUFFIX,tcy365.net,全球直连
-  - DOMAIN-SUFFIX,thinkerride.com,全球直连
-  - DOMAIN-SUFFIX,tool56.com,全球直连
-  - DOMAIN-SUFFIX,tumukaoyan.com,全球直连
-  - DOMAIN-SUFFIX,tuxing.art,全球直连
-  - DOMAIN-SUFFIX,u-carloan.com,全球直连
-  - DOMAIN-SUFFIX,ugdocker.link,全球直连
-  - DOMAIN-SUFFIX,ulife.group,全球直连
-  - DOMAIN-SUFFIX,vbkhk.com,全球直连
-  - DOMAIN-SUFFIX,vbkr.com,全球直连
-  - DOMAIN-SUFFIX,vbkrhk.com,全球直连
-  - DOMAIN-SUFFIX,vclbroker.com,全球直连
-  - DOMAIN-SUFFIX,vclbrokers.com,全球直连
-  - DOMAIN-SUFFIX,vcltrade.com,全球直连
-  - DOMAIN-SUFFIX,vgogbuy.com,全球直连
-  - DOMAIN-SUFFIX,warmheart.top,全球直连
-  - DOMAIN-SUFFIX,webs.vc,全球直连
-  - DOMAIN-SUFFIX,wenyi188.com,全球直连
-  - DOMAIN-SUFFIX,wewillpro.com,全球直连
-  - DOMAIN-SUFFIX,wjx.top,全球直连
-  - DOMAIN-SUFFIX,wlcdn88.com,全球直连
-  - DOMAIN-SUFFIX,wwwh.eu.org,全球直连
-  - DOMAIN-SUFFIX,x86pi.com,全球直连
-  - DOMAIN-SUFFIX,xbgjw.com,全球直连
-  - DOMAIN-SUFFIX,xdqtech.com,全球直连
-  - DOMAIN-SUFFIX,xdtool.com,全球直连
-  - DOMAIN-SUFFIX,xiankabao.com,全球直连
-  - DOMAIN-SUFFIX,xiaochuanyun.com,全球直连
-  - DOMAIN-SUFFIX,xixih.cc,全球直连
-  - DOMAIN-SUFFIX,xn--4kq62z5rby2qupq9ub.top,全球直连
-  - DOMAIN-SUFFIX,xopenbeta.com,全球直连
-  - DOMAIN-SUFFIX,yiso.fun,全球直连
-  - DOMAIN-SUFFIX,yongyu.xyz,全球直连
-  - DOMAIN-SUFFIX,yooc.me,全球直连
-  - DOMAIN-SUFFIX,yunzuoye.net,全球直连
-  - DOMAIN-SUFFIX,yzcsoft.com,全球直连
-  - DOMAIN-SUFFIX,z6e.com,全球直连
-  - DOMAIN-SUFFIX,zctnet.top,全球直连
-  - DOMAIN-SUFFIX,zeekrline.com,全球直连
-  - DOMAIN-SUFFIX,zhongancloud.com,全球直连
-  - DOMAIN-SUFFIX,znnu.com,全球直连
-  - DOMAIN-SUFFIX,znztv.com,全球直连
-  - DOMAIN-SUFFIX,zuobiao.press,全球直连
-  - IP-CIDR,108.174.48.100/32,全球直连,no-resolve
-  - IP-CIDR,218.78.7.16/32,全球直连,no-resolve
-  - IP-CIDR,5.5.5.5/32,全球直连,no-resolve
-  - IP-CIDR,98.126.27.164/32,全球直连,no-resolve
-
-##- RULE-SET,Custom_Proxy_Classical,手动选择
-  - DOMAIN-SUFFIX,7pzzv.us,手动选择
-  - DOMAIN-SUFFIX,arduino.cc,手动选择
-  - DOMAIN-SUFFIX,clientservices.googleapis.com,手动选择
-  - DOMAIN-SUFFIX,cloudsync-prod.s3.us-east-1.amazonaws.com,手动选择
-  - DOMAIN-SUFFIX,dmhy.org,手动选择
-  - DOMAIN-SUFFIX,googleapis.cn,手动选择
-  - DOMAIN-SUFFIX,hoyolab.com,手动选择
-  - DOMAIN-SUFFIX,ip.sb,手动选择
-  - DOMAIN-SUFFIX,ipify.org,手动选择
-  - DOMAIN-SUFFIX,mtalk.google.com,手动选择
-  - DOMAIN-SUFFIX,onedrive.live.com,手动选择
-  - DOMAIN-SUFFIX,platformio.org,手动选择
-  - DOMAIN-SUFFIX,services.googleapis.cn,手动选择
-  - DOMAIN-SUFFIX,stun.playstation.net,手动选择
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,手动选择
-  - IP-CIDR,1.0.0.1/32,手动选择,no-resolve
-  - IP-CIDR,1.1.1.1/32,手动选择,no-resolve
-
+  - RULE-SET,My_Direct,全球直连
+  - RULE-SET,Custom_Direct_Classical,全球直连
+  - RULE-SET,Custom_Proxy_Classical,手动选择
   - GEOSITE,google-cn,全球直连
   - GEOSITE,category-games@cn,全球直连
-
-##- RULE-SET,Steam_CDN_Classical,全球直连
-  - DOMAIN-SUFFIX,cm.steampowered.com,全球直连
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,全球直连
-  - DOMAIN-SUFFIX,steamserver.net,全球直连
-  - IP-CIDR,103.10.124.0/23,全球直连,no-resolve
-  - IP-CIDR,103.28.54.0/24,全球直连,no-resolve
-  - IP-CIDR,146.66.152.0/24,全球直连,no-resolve
-  - IP-CIDR,146.66.155.0/24,全球直连,no-resolve
-  - IP-CIDR,153.254.86.0/24,全球直连,no-resolve
-  - IP-CIDR,155.133.224.0/22,全球直连,no-resolve
-  - IP-CIDR,155.133.230.0/24,全球直连,no-resolve
-  - IP-CIDR,155.133.232.0/23,全球直连,no-resolve
-  - IP-CIDR,155.133.234.0/24,全球直连,no-resolve
-  - IP-CIDR,155.133.236.0/22,全球直连,no-resolve
-  - IP-CIDR,155.133.240.0/23,全球直连,no-resolve
-  - IP-CIDR,155.133.244.0/23,全球直连,no-resolve
-  - IP-CIDR,155.133.246.0/24,全球直连,no-resolve
-  - IP-CIDR,155.133.248.0/21,全球直连,no-resolve
-  - IP-CIDR,162.254.192.0/21,全球直连,no-resolve
-  - IP-CIDR,185.25.182.0/23,全球直连,no-resolve
-  - IP-CIDR,190.217.32.0/22,全球直连,no-resolve
-  - IP-CIDR,192.69.96.0/22,全球直连,no-resolve
-  - IP-CIDR,205.185.194.0/24,全球直连,no-resolve
-  - IP-CIDR,205.196.6.0/24,全球直连,no-resolve
-  - IP-CIDR,208.64.200.0/22,全球直连,no-resolve
-  - IP-CIDR,208.78.164.0/22,全球直连,no-resolve
-  - IP-CIDR,45.121.184.0/24,全球直连,no-resolve
-
+  - RULE-SET,Steam_CDN_Classical,全球直连
   - GEOSITE,category-game-platforms-download,全球直连
   - GEOSITE,category-public-tracker,全球直连
   - GEOSITE,category-communication,即时通讯
@@ -1105,14 +832,14 @@ rules:
   - GEOSITE,bing,Copilot
   - GEOSITE,category-ai-!cn,AI服务
   - GEOSITE,github,GitHub
-  - GEOSITE,category-speedtest,🚀 测速工具
+  - GEOSITE,category-speedtest,测速工具
   - GEOSITE,steam,Steam
   - GEOSITE,youtube,YouTube
   - GEOSITE,apple-tvplus,AppleTV+
   - GEOSITE,apple,苹果服务
   - GEOSITE,microsoft,微软服务
   - GEOSITE,googlefcm,谷歌FCM
-  - GEOSITE,google,🇬 谷歌服务
+  - GEOSITE,google,谷歌服务
   - GEOSITE,tiktok,TikTok
   - GEOSITE,netflix,Netflix
   - GEOSITE,disney,DisneyPlus
@@ -1128,14 +855,35 @@ rules:
   - GEOIP,telegram,即时通讯,no-resolve
   - GEOIP,twitter,社交媒体,no-resolve
   - GEOIP,facebook,社交媒体,no-resolve
-  - GEOIP,google,🇬 谷歌服务,no-resolve
+  - GEOIP,google,谷歌服务,no-resolve
   - GEOIP,netflix,Netflix,no-resolve
   - GEOSITE,cn,全球直连
   - GEOIP,cn,全球直连,no-resolve
-
-##- RULE-SET,Custom_Port_Direct,非标端口
-  - DST-PORT,1-79,非标端口
-  - DST-PORT,81-442,非标端口
-  - DST-PORT,444-65535,非标端口
-
+  - RULE-SET,Custom_Port_Direct,非标端口
   - MATCH,漏网之鱼
+rule-providers:
+  My_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
+    interval: 28800
+  Custom_Direct_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml
+    interval: 28800
+  Custom_Proxy_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml
+    interval: 28800
+  Steam_CDN_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
+    interval: 28800
+  Custom_Port_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
+    interval: 28800
