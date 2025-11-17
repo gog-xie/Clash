@@ -25,11 +25,6 @@ proxy-providers:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 300
-    proxy: 直连
-
-proxies:
-  - {name: 直连, type: direct}
-  - {name: 拒绝, type: reject}
 
 # ========================
 # DNS 设置
@@ -609,7 +604,7 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
     type: select
     proxies:
-    - 直连
+    - DIRECT
 
   - name: 测速工具
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
