@@ -1,7 +1,7 @@
 port: 3333
 
-机场名称:
-  iFarcloud:
+proxy-providers:
+  机场名称:
     type: http
     url: https://oooooooooooooolt?clash=1&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
