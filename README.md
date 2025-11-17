@@ -60,15 +60,28 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 
 #### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Fallback.yaml)
+#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_Fallback.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Fallback.yaml
+https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_Fallback.yaml
 ```
 
 -  ## 其他系统订阅模板配置
 >   #### 若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
 >  * 分两种情况，在Openclash配置订阅里，使用规则集选“禁用”时，OpenClash中配置好的yaml文件可直接下载导入Merlinclash中使用。如果使用规则集选“启用”时，Openclash的yaml配置订阅文件需稍加修改，需要将OpenClash中的yaml配置文件中rules的RULE-SET改为具体的规则数据（参照Aethersailor大佬及本项目rule的Custom_Direct_Classical.yaml及My_Direct.yaml等文件）及策略组（尽可能不要改变规则的先后顺序），并删除rule-providers相关数据后，可直接导入华硕路由器Merlinclash等系统的订阅规则文件，目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。
+
+- ### Clash Verge
+#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/Clash%20Verge.yaml)
+
+```
+https://github.com/gog-xie/clash/blob/main/CF/yaml/Clash%20Verge.yaml
+```
+- ### MerlinClash
+#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml)
+
+```
+https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
+```
 <p align="center"> <b>OpenClash使用规则集 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/%E8%A7%84%E5%88%99%E9%9B%86.png" width="720" heiht="380"></div>
 
