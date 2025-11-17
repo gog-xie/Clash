@@ -58,7 +58,6 @@ payload:
   - DOMAIN-SUFFIX,dyg55.com
   - DOMAIN-SUFFIX,yuneu.com
   - DOMAIN-SUFFIX,zzyhh.top
-  - DOMAIN-SUFFIX,cloudflare.com
   - DOMAIN-SUFFIX,cookielaw.org
   - DOMAIN-SUFFIX,jsdelivr.com
   - DOMAIN-SUFFIX,66jc.top
@@ -104,7 +103,6 @@ payload:
   - DOMAIN-SUFFIX,rufus.ie
   - DOMAIN-SUFFIX,friendlyelec.com
   - DOMAIN-SUFFIX,jumengfang.com
-  - DOMAIN-SUFFIX,cloudflareinsights.com
   - DOMAIN-SUFFIX,hanxi.cc
   - DOMAIN-SUFFIX,immersivetranslate.com
   - DOMAIN-SUFFIX,synocommunity.com
