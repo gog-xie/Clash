@@ -37,7 +37,7 @@ dns:
   fake-ip-range: 198.20.0.1/16
   nameserver:
     - 223.5.5.5
-#（可填写当地运营商DNS，如四川电信DNS：218.6.200.139和202.98.96.68）
+# 可填写当地运营商DNS，如四川电信DNS：218.6.200.139和202.98.96.68
   fake-ip-filter:
     - +.lan
     - +.local
@@ -632,6 +632,7 @@ proxy-groups:
   - name: 香港-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -656,6 +657,7 @@ proxy-groups:
   - name: 美国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -680,6 +682,7 @@ proxy-groups:
   - name: 日本-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -704,6 +707,7 @@ proxy-groups:
   - name: 台湾-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -728,6 +732,7 @@ proxy-groups:
   - name: 新加坡-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -752,6 +757,7 @@ proxy-groups:
   - name: 韩国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -776,6 +782,7 @@ proxy-groups:
   - name: GPT-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -800,6 +807,7 @@ proxy-groups:
   - name: 流媒体-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -824,6 +832,7 @@ proxy-groups:
   - name: 其他-故转
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/earth-setting.png"
     type: fallback
+    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
