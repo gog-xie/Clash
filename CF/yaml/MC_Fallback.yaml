@@ -9,6 +9,7 @@ proxy-providers:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 300
+      filter: "^((?!(建议|如果|教程|导致|客户端)).)*$"  
     override:
       additional-prefix: "[机场名称]"
 
