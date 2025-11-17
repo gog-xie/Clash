@@ -34,7 +34,6 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
@@ -43,7 +42,6 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(直连|拒绝|建议|如果|教程|导致|客户端)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
