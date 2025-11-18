@@ -111,6 +111,7 @@ payload:
   - DOMAIN-SUFFIX,board.zash.run.place
   - DOMAIN-SUFFIX,yacd.metacubex.one
   - DOMAIN-KEYWORD,metacubex
+  - DOMAIN-SUFFIX,challenges.cloudflare.com
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
