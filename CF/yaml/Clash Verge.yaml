@@ -1,16 +1,6 @@
 # 根据在用机场定制的yaml配置文件，比如机场有AI、流媒体解锁等专项节点，故本订阅节点加入了“流媒体”、“GPT”策略组，不需要的可删除，但要删干净，特别是策略组中的节点，否则报错
 # 根据自己使用习惯，策略组已将默认节点策略组放置在最前，便于每次更新订阅均不需重新选择节点策略组，可根据自己的情况对策略组的顺序做相应调整。
 
-# ========================
-# 端口
-# ========================
-
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: rule
-log-level: info
-external-controller: 127.0.0.1:9090
 
 # ========================
 # 机场订阅
@@ -21,12 +11,11 @@ proxy-providers:
     type: http
     url: https://机场订阅地址&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
+    filter: "^((?!(建议|0.1X|0.5X)).)*$"  ##此项是在订阅转换机场节点时，需排除你不需要的节点，通常都是限速节点，填关键字即可，如0.1X、0.5X等，下类同
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 300
-      filter: "^((?!(建议|0.1X|0.5X)).)*$"  ##此项是在订阅转换机场节点时，需排除你不需要的节点，通常都是限速节点，填关键字即可，如0.1X、0.5X等，下类同
-
 
 # ========================
 # 策略组
@@ -705,7 +694,6 @@ proxy-groups:
   - name: 香港-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -721,7 +709,6 @@ proxy-groups:
   - name: 香港-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -731,7 +718,6 @@ proxy-groups:
   - name: 美国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -747,7 +733,6 @@ proxy-groups:
   - name: 美国-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -757,7 +742,6 @@ proxy-groups:
   - name: 日本-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -773,7 +757,6 @@ proxy-groups:
   - name: 日本-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -783,7 +766,6 @@ proxy-groups:
   - name: 台湾-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -799,7 +781,6 @@ proxy-groups:
   - name: 台湾-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -809,7 +790,6 @@ proxy-groups:
   - name: 新加坡-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -825,7 +805,6 @@ proxy-groups:
   - name: 新加坡-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -835,7 +814,6 @@ proxy-groups:
   - name: 韩国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -851,7 +829,6 @@ proxy-groups:
   - name: 韩国-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -861,7 +838,6 @@ proxy-groups:
   - name: GPT-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -877,7 +853,6 @@ proxy-groups:
   - name: GPT-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -887,7 +862,6 @@ proxy-groups:
   - name: 流媒体-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -903,7 +877,6 @@ proxy-groups:
   - name: 流媒体-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
@@ -913,7 +886,6 @@ proxy-groups:
   - name: 其他-故转
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/earth-setting.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -929,7 +901,6 @@ proxy-groups:
   - name: 其他-自动
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
