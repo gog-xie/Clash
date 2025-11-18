@@ -60,10 +60,10 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 
 #### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_Fallback.yaml)
+#### [Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_Fallback.yaml
+https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
 ```
 
 -  ## 其他系统订阅模板配置
