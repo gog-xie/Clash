@@ -1,3 +1,6 @@
+# 根据在用机场定制的yaml配置文件，比如机场有AI、流媒体解锁等专项节点，故本订阅节点加入了“流媒体”、“GPT”策略组，不需要的可删除，但要删干净，特别是策略组中的节点，否则报错
+# 根据自己使用习惯，策略组已将默认节点策略组放置在最前，便于每次更新订阅均不需重新选择节点策略组，可根据自己的情况对策略组的顺序做相应调整。
+
 # ========================
 # 端口
 # ========================
@@ -31,7 +34,7 @@ proxy-providers:
 
 proxy-groups:
   - name: 手动选择
-    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png"  ##在Clash Verge中proxy-groups不显示图标，也许是软件不完善，暂保留，下类同
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png"
     type: select
     include-all: true
     proxies:
@@ -46,23 +49,22 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(建议|0.1X|0.5X)).)*$"
+    filter: "^((?!(建议)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
     type: url-test
-    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(建议|0.1X|0.5X)).)*$"
+    filter: "^((?!(建议)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
     type: select
     proxies:
-      - 香港-故转
       - 香港-自动
+      - 香港-故转
       - 美国-故转
       - 美国-自动
       - 日本-故转
@@ -73,8 +75,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -82,10 +89,10 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
     type: select
     proxies:
-      - 香港-故转
-      - 香港-自动
       - 美国-故转
       - 美国-自动
+      - 香港-故转
+      - 香港-自动
       - 日本-故转
       - 日本-自动
       - 新加坡-故转
@@ -94,8 +101,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -103,10 +115,10 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
     type: select
     proxies:
-      - 香港-故转
-      - 香港-自动
       - 美国-故转
       - 美国-自动
+      - 香港-故转
+      - 香港-自动
       - 日本-故转
       - 日本-自动
       - 新加坡-故转
@@ -115,8 +127,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -124,10 +141,10 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
     type: select
     proxies:
-      - 香港-故转
-      - 香港-自动
       - 美国-故转
       - 美国-自动
+      - 香港-故转
+      - 香港-自动
       - 日本-故转
       - 日本-自动
       - 新加坡-故转
@@ -136,8 +153,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -159,8 +181,11 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -182,8 +207,11 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -203,8 +231,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -224,8 +257,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -245,8 +283,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -266,8 +309,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -287,8 +335,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -310,8 +363,11 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -333,8 +389,11 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -342,6 +401,8 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"
     type: select
     proxies:
+      - 流媒体-故转
+      - 流媒体-自动
       - 香港-故转
       - 香港-自动
       - 美国-故转
@@ -354,8 +415,11 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -363,20 +427,25 @@ proxy-groups:
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video_1.png"
     type: select
     proxies:
+      - 流媒体-故转
+      - 流媒体-自动
       - 香港-故转
       - 香港-自动
       - 美国-故转
       - 美国-自动
       - 日本-故转
       - 日本-自动
-      - 新加坡-故转
-      - 新加坡-自动
       - 台湾-故转
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -396,8 +465,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
       - 全球直连
 
@@ -418,8 +492,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: 苹果服务
@@ -439,8 +518,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: AppleTV+
@@ -460,8 +544,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: Emby
@@ -481,8 +570,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: Steam
@@ -502,8 +596,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: 微软服务
@@ -523,8 +622,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: 游戏平台
@@ -544,8 +648,13 @@ proxy-groups:
       - 台湾-自动
       - 韩国-故转
       - 韩国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
       - 其他-故转
       - 其他-自动
+      - 手动选择
       - 全部自动
 
   - name: Bahamut
@@ -586,6 +695,7 @@ proxy-groups:
       - 全球直连
       - 全部自动
     filter: "^((?!(建议)).)*$"
+
 
 # ========================
 # 业务分流组
