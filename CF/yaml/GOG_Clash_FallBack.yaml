@@ -13,10 +13,19 @@
 
 port: 7890
 socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7895
+
 allow-lan: true
 mode: rule
 log-level: info
-external-controller: 127.0.0.1:9090
+
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+secret: "123456"  # 设置zashboard面板的访问密码
 
 # ========================
 # 机场订阅
@@ -26,10 +35,10 @@ proxy-providers:
     url: "机场订阅地址"
     type: http
     interval: 86400
+    filter: "^((?!(建议)).)*$"
     override:
       skip-cert-verify: true
       udp: true
-      filter: "^((?!(建议)).)*$"  
     health-check:
       enable: true
       url: http://www.apple.com/library/test/success.html
@@ -749,7 +758,6 @@ proxy-groups:
   - name: 香港-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -774,7 +782,6 @@ proxy-groups:
   - name: 美国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -799,7 +806,6 @@ proxy-groups:
   - name: 日本-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -824,7 +830,6 @@ proxy-groups:
   - name: 台湾-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -849,7 +854,6 @@ proxy-groups:
   - name: 新加坡-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -874,7 +878,6 @@ proxy-groups:
   - name: 韩国-故转
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -899,7 +902,6 @@ proxy-groups:
   - name: GPT-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -924,7 +926,6 @@ proxy-groups:
   - name: 流媒体-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
@@ -949,7 +950,6 @@ proxy-groups:
   - name: 其他-故转
     icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/earth-setting.png"
     type: fallback
-    url: http://www.apple.com/library/test/success.html
     interval: 300
     lazy: false
     proxies:
