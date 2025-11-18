@@ -108,6 +108,7 @@ payload:
   - DOMAIN-SUFFIX,synocommunity.com
   - DOMAIN-SUFFIX,pythonhosted.org
   - DOMAIN-SUFFIX,pypi.org
+  - DOMAIN-SUFFIX,board.zash.run.place
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
