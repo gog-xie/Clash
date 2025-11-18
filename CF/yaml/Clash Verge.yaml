@@ -684,7 +684,7 @@ proxy-groups:
     include-all: true
     proxies:
       - 全球直连
-      - 全部自动
+      - 手动选择
     filter: "^((?!(建议)).)*$"
 
   - name: 漏网之鱼
@@ -693,7 +693,7 @@ proxy-groups:
     include-all: true
     proxies:
       - 全球直连
-      - 全部自动
+      - 手动选择
     filter: "^((?!(建议)).)*$"
 
 
