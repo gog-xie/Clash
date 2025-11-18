@@ -940,9 +940,15 @@ rules:
   - RULE-SET,Steam_CDN_Classical,全球直连
   - GEOSITE,category-game-platforms-download,全球直连
   - GEOSITE,category-public-tracker,全球直连
+  - GEOSITE,steam@cn,全球直连
+  - GEOSITE,apple@cn,全球直连
+  - GEOSITE,microsoft@cn,全球直连
+  - GEOSITE,nintendo@cn,全球直连
   - GEOSITE,category-communication,即时通讯
   - GEOSITE,category-social-media-!cn,社交媒体
   - GEOSITE,openai,ChatGPT
+  - GEOSITE,anthropic,ChatGPT
+  - GEOSITE,xai,ChatGPT
   - GEOSITE,bing,Copilot
   - GEOSITE,category-ai-!cn,AI服务
   - GEOSITE,github,GitHub
