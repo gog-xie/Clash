@@ -46,7 +46,7 @@ proxy-groups:
     filter: "^((?!(建议|如果|教程|客户端)).)*$"
 
   - name: 全部自动
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
     type: url-test
     include-all: true
     tolerance: 50
