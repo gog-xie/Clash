@@ -19,7 +19,7 @@ proxy-providers:
       enable: true
       url: http://www.apple.com/library/test/success.html
       interval: 300
-      filter: "^((?!(建议|如果|教程|导致|客户端)).)*$"  
+      filter: "^((?!(建议|如果|导致|客户端)).)*$"  
     override:
       additional-prefix: "[机场名称]"
 
@@ -44,7 +44,7 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(建议)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
@@ -52,7 +52,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(建议)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
@@ -680,7 +680,7 @@ proxy-groups:
     proxies:
       - 全球直连
       - 手动选择
-    filter: "^((?!(建议)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端)).)*$"
 
   - name: 漏网之鱼
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
@@ -689,7 +689,7 @@ proxy-groups:
     proxies:
       - 全球直连
       - 手动选择
-    filter: "^((?!(建议)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端)).)*$"
 
 # ========================
 # 业务分流组
@@ -901,7 +901,7 @@ proxy-groups:
     icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
-    filter: "^((?!(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
 
   - name: 其他-自动
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
@@ -909,7 +909,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
+    filter: "^((?!(建议|如果|导致|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
 
 # ========================
 # 规则组
