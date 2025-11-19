@@ -1,22 +1,9 @@
-  - name: 香港-故转
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
-      - 香港-手动
-      - 香港-自动
-  
-  - name: 香港-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
-    type: select
-    include-all: true
-    filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
-    
-  - name: 香港-自动
-    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
-    type: url-test
-    include-all: true
-    tolerance: 50
-    interval: 300
-    filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+- name: 香港-故转
+  type: fallback
+  url: "http://www.apple.com/library/test/success.html"
+  interval: 300
+  lazy: false
+  icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
+  proxies:
+    - 香港-手动
+    - 香港-自动
