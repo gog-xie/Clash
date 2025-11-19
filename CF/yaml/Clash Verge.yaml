@@ -28,7 +28,7 @@ proxy-providers:
 
 proxy-groups:
   - name: 手动选择
-    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
     type: select
     include-all: true
     proxies:
@@ -46,7 +46,7 @@ proxy-groups:
     filter: "^((?!(建议)).)*$"
 
   - name: 全部自动
-    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
     type: url-test
     include-all: true
     tolerance: 50
@@ -106,7 +106,7 @@ proxy-groups:
       - 全球直连
 
   - name: 谷歌FCM
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png"
     type: select
     proxies:
       - 美国-故转
@@ -210,7 +210,7 @@ proxy-groups:
       - 全球直连
 
   - name: 国外媒体
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/stash.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
     type: select
     proxies:
       - 香港-故转
@@ -682,14 +682,13 @@ proxy-groups:
     filter: "^((?!(建议)).)*$"
 
   - name: 漏网之鱼
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/back.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
     type: select
     include-all: true
     proxies:
       - 全球直连
       - 手动选择
     filter: "^((?!(建议)).)*$"
-
 
 # ========================
 # 业务分流组
@@ -706,13 +705,13 @@ proxy-groups:
       - 香港-自动
   
   - name: 香港-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
     
   - name: 香港-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -730,13 +729,13 @@ proxy-groups:
       - 美国-自动
 
   - name: 美国-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
 
   - name: 美国-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -754,13 +753,13 @@ proxy-groups:
       - 日本-自动
 
   - name: 日本-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
 
   - name: 日本-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -778,13 +777,13 @@ proxy-groups:
       - 台湾-自动
 
   - name: 台湾-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
 
   - name: 台湾-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -802,13 +801,13 @@ proxy-groups:
       - 新加坡-自动
 
   - name: 新加坡-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
 
   - name: 新加坡-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -826,13 +825,13 @@ proxy-groups:
       - 韩国-自动
 
   - name: 韩国-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
 
   - name: 韩国-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -850,13 +849,13 @@ proxy-groups:
       - GPT-自动
 
   - name: GPT-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(AI)).*$"
 
   - name: GPT-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -865,7 +864,7 @@ proxy-groups:
 
   # 流媒体组
   - name: 流媒体-故转
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png"
     type: fallback
     interval: 300
     lazy: false
@@ -874,13 +873,13 @@ proxy-groups:
       - 流媒体-自动
 
   - name: 流媒体-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "(?=.*(流媒体)).*$"
 
   - name: 流媒体-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
@@ -889,7 +888,7 @@ proxy-groups:
 
   # 其他地区组
   - name: 其他-故转
-    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/earth-setting.png"
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/global-55.png"
     type: fallback
     interval: 300
     lazy: false
@@ -898,13 +897,13 @@ proxy-groups:
       - 其他-自动
 
   - name: 其他-手动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/double-tap.png
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
     type: select
     include-all: true
     filter: "^((?!(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).)*$"
 
   - name: 其他-自动
-    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/auto.png
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
     type: url-test
     include-all: true
     tolerance: 50
