@@ -1,0 +1,6 @@
+# 国内群晖NAS，除了Emby刮削海报信息、Docker镜像仓库需porxy外，其余全直连
+payload:
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,thetvdb.com
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,docker.com
