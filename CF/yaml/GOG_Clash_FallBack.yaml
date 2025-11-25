@@ -38,7 +38,7 @@ proxy-providers:
     url: "机场订阅地址"
     type: http
     interval: 86400
-    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
     override:
       skip-cert-verify: true
       udp: true
@@ -86,9 +86,9 @@ profile:
   store-selected: true
   store-fake-ip: true
 
-# ————————————————————————
+# ========================
 # 策略组
-# ————————————————————————
+# ========================
 
 proxy-groups:
   - name: 手动选择
@@ -108,7 +108,7 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
@@ -116,7 +116,7 @@ proxy-groups:
     include-all: true
     tolerance: 50
     interval: 300
-    filter: "^((?!(如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
 
   - name: GitHub
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
@@ -790,7 +790,7 @@ proxy-groups:
     proxies:
       - 全球直连
       - 手动选择
-    filter: "^((?!(如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
 
   - name: 漏网之鱼
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
@@ -799,11 +799,11 @@ proxy-groups:
     proxies:
       - 全球直连
       - 手动选择
-    filter: "^((?!(如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
 
-# ————————————————————————
-# 节点分组
-# ————————————————————————
+# ========================
+# 业务分流组
+# ========================
 
   # 香港组
   - name: 香港-故转
@@ -1046,9 +1046,10 @@ proxy-groups:
     interval: 300
     filter: "^((?!(建议|如果|教程|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).)*$"
 
-# ————————————————————————
-# 规则组及规则集
-# ————————————————————————
+# ========================
+# 规则组
+# ========================
+
 
 rules:
   - GEOSITE,private,全球直连
@@ -1107,29 +1108,24 @@ rule-providers:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
-    path: ./providers/7728120747149078990.yaml
     interval: 28800
   Custom_Direct_Classical:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml
-    path: ./providers/15519759398106057482.yaml
     interval: 28800
   Custom_Proxy_Classical:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml
-    path: ./providers/5958306251279867197.yaml
     interval: 28800
   Steam_CDN_Classical:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
-    path: ./providers/13268481674871578153.yaml
     interval: 28800
   Custom_Port_Direct:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
-    path: ./providers/2451647452112462632.yaml
     interval: 28800
