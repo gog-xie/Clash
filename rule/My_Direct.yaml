@@ -116,6 +116,7 @@ payload:
   - DOMAIN-SUFFIX,jellyfin.org
   - DOMAIN-SUFFIX,readme.io
   - DOMAIN-SUFFIX,readme.com
+  - DOMAIN-SUFFIX,gh-proxy.org
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
