@@ -973,7 +973,6 @@ proxy-groups:
     interval: 300
     filter: "(?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$"
 
-
   # GPT组
   - name: GPT-故转
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
@@ -1050,7 +1049,6 @@ proxy-groups:
 # 规则组
 # ========================
 
-
 rules:
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
@@ -1103,6 +1101,7 @@ rules:
   - GEOIP,cn,全球直连,no-resolve
   - RULE-SET,Custom_Port_Direct,非标端口
   - MATCH,漏网之鱼
+
 rule-providers:
   My_Direct:
     type: http
