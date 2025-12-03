@@ -94,6 +94,8 @@ proxy-groups:
   - name: 手动选择
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
     type: select
+    url: "https://cp.cloudflare.com/generate_204"
+    interval: 300
     include-all: true
     proxies:
       - 全部自动
