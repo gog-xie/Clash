@@ -2,7 +2,7 @@
 # Aethersailor's Direct list：https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/refs/heads/main/rule/Custom_Direct_Classical.yaml
 # REPO: https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/rule/My_Direct.yaml
 # Direct REPO: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
-# TOTAL:108
+# TOTAL:117
 payload:
   - DOMAIN-SUFFIX,docker.amingg.com
   - DOMAIN-SUFFIX,docker-cf.mrs.1ms.run
@@ -117,6 +117,8 @@ payload:
   - DOMAIN-SUFFIX,readme.io
   - DOMAIN-SUFFIX,readme.com
   - DOMAIN-SUFFIX,gh-proxy.org
+  - DOMAIN-SUFFIX,gdstudio.xyz
+  - DOMAIN-SUFFIX,gdstudio.org
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
