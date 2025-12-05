@@ -122,3 +122,4 @@ payload:
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
+  - IP-CIDR,1.1.1.1/32,no-resolve
