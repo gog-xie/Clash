@@ -68,10 +68,10 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
 https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
 ```
 
-#### [Clash Verge-Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/Clash Verge.yaml)
+#### [ClashVerge-Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/Clash Verge.yaml
+https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml
 ```
 
 -  ## 其他系统订阅模板配置
