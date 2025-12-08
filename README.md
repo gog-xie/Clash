@@ -81,16 +81,16 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
 <p align="center"> <b>OpenClash使用规则集 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/clash/blob/main/pic/clash/%E8%A7%84%E5%88%99%E9%9B%86.png" width="720" heiht="380"></div>
 
--  ## 在OpenClash或MerlinClash中，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要科学代理设备的网关指向旁路由即可，不需科学代理的默认指向主路由；但也有设备仅少量代理需求，其余不走科学代理，或主路由情况下的部分设备不走科学代理。特别是前者比较特殊，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况，可以利用规则先后顺序正则匹配的特点来实现，按先后顺序匹配指令，如果没有匹配上，再去匹配下一项指令。根据这一特点，先将不需要代理或部分需要代理的设备IP 与MAC地址绑定，再让不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连。把这三项放规则集的最前端即可，例如以下规则：内网设备192.168.50.88走直连，设备192.168.50.8的部分域名（My_Proxy）走代理，其余走直连。
--  #### - SRC-IP-CIDR,192.168.50.88/32,DIRECT
--  #### - RULE-SET,My_Proxy,手动选择
--  #### - SRC-IP-CIDR,192.168.50.8/32,DIRECT
--  ## 如果只有有少量的代理需求，可直接写域名或IP规则匹配：
--  #### - SRC-IP-CIDR,192.168.50.88/32,DIRECT
--  #### - DOMAIN-SUFFIX,themoviedb.org，国外媒体
--  #### - DOMAIN-SUFFIX,tmdb.org，国外媒体
--  #### - DOMAIN-SUFFIX,hub.docker.com，github
--  #### - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+>  * 在OpenClash或MerlinClash中，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要科学代理设备的网关指向旁路由即可，不需科学代理的默认指向主路由；但也有设备仅少量代理需求，其余不走科学代理，或主路由情况下的部分设备不走科学代理。特别是前者比较特殊，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况，可以利用规则先后顺序正则匹配的特点来实现，按先后顺序匹配指令，如果没有匹配上，再去匹配下一项指令。根据这一特点，先将不需要代理或部分需要代理的设备IP 与MAC地址绑定，再让不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连。把这三项放规则集的最前端即可，例如以下规则：内网设备192.168.50.88走直连，设备192.168.50.8的部分域名（My_Proxy）走代理，其余走直连。
+>  * - SRC-IP-CIDR,192.168.50.88/32,DIRECT
+>  * - RULE-SET,My_Proxy,手动选择
+>  * - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+>  * 如果只有有少量的代理需求，可直接写域名或IP规则匹配：
+>  * - SRC-IP-CIDR,192.168.50.88/32,DIRECT
+>  * - DOMAIN-SUFFIX,themoviedb.org，国外媒体
+>  * - DOMAIN-SUFFIX,tmdb.org，国外媒体
+>  * - DOMAIN-SUFFIX,hub.docker.com，github
+>  * - SRC-IP-CIDR,192.168.50.8/32,DIRECT
 
 
                      
