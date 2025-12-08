@@ -64,7 +64,7 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
 
 -  ## 其他系统订阅模板配置
 >   #### 若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
->  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中直接下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。但这里还是推荐使用配置以下配置好的yaml文件：
+>  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中直接下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。但这里还是推荐使用以下yaml文件，仅需修改yaml文件中的机场地址即可：
 
 
 #### [ClashVerge模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml)
