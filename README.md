@@ -89,6 +89,7 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
 - SRC-IP-CIDR,192.168.50.88/32,DIRECT
 - RULE-SET,My_Proxy,手动选择
 - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+......
 ```
 >  * 如果只有有少量的代理需求，可直接写域名或IP规则匹配：
 ```
@@ -97,6 +98,7 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
 - DOMAIN-SUFFIX,tmdb.org，国外媒体
 - DOMAIN-SUFFIX,hub.docker.com，github
 - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+......
 ```
 
                      
