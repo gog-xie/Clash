@@ -79,7 +79,7 @@ https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yam
 https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
 ```
 <p align="center"> <b>MerlinClash GeoIP数量显示为0 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png" width="720" heiht="380"></div>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png" width="360" heiht="190"></div>
 
 
 -  ## 特殊情况
