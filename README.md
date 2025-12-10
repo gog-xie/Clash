@@ -19,7 +19,7 @@
 
 #### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [Fallback模板：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml)
+#### [Fallback模板：](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
@@ -68,22 +68,22 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 >  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。但这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址即可：
 
 
-#### [ClashVerge模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml)
+#### [ClashVerge模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge.yaml
 ```
 
-#### [MerlinClash_FallBack模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash_FallBack.yaml)
+#### [MerlinClash_FallBack模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml
 ```
 
-#### [MerlinClash_Simple模板地址：](https://github.com/gog-xie/Clash/blob/main/CF/yaml/MerlinClash_Simple.yaml)
+#### [MerlinClash_Simple模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml)
 
 ```
-https://github.com/gog-xie/Clash/blob/main/CF/yaml/MerlinClash_Simple.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml
 ```
 
 <p align="center"> <b>MerlinClash GeoIP数量显示为0 </b></p>
