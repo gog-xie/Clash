@@ -19,20 +19,20 @@
 
 #### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [OpenClash-Fallback模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml)
+#### [Fallback模板：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
 ```
 
-#### [OpenClash-模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml)
+#### [url-test-模板：](https://github.com/gog-xie/Clash/blob/main/CF/yaml/GOG_Clash_Simple.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/CF/yaml/GOG_Clash_Simple.yaml
 ```
 
 
-- ### Custom_Clash.in
+- ### ini配置订阅链接
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
@@ -45,7 +45,6 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 ```
 
-- ### Custom_Clash_Simple.ini
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
 
 ```
@@ -58,7 +57,6 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Simple.ini
 ```
 
-- ### Custom_Clash_FallBack.ini
 #### [Github地址：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
 
 ```
