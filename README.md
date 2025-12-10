@@ -22,13 +22,13 @@
 #### [Fallback模板：](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/GOG_Clash_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml
 ```
 
-#### [url-test-模板：](https://github.com/gog-xie/Clash/blob/main/CF/yaml/GOG_Clash_Simple.yaml)
+#### [url-test-模板：](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml)
 
 ```
-https://github.com/gog-xie/Clash/blob/main/CF/yaml/GOG_Clash_Simple.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
 ```
 
 
