@@ -1,0 +1,700 @@
+# 使用说明
+# 本yaml配置模板适配于MerlinClash，输入机场订阅地址和机场名称即可导入MerlinClash；（需修订文件名，小于15字符）
+# FallBack模式下，手动刷新时不能自动转移是正常现象，按程序给定的时间间隔自动刷新后会自动故障转移；
+# 涉及类似filter: "^((?!(建议|0.1X)).)*$"的语句行，是将自己不需要的机场节点排除掉，通常都是限速节点，需根据机场节点情况自行排除，输入关键字即可，每个关键字用“|”隔开；  
+# 根据在用机场节点定制的yaml配置文件，比如机场有AI、流媒体解锁等专项节点，故本订阅节点加入了“流媒体”、“GPT”策略组，不需要的可删除，但要删干净，特别是策略组中的节点，否则报错；
+# 机场节点地区分类仅分了香港、美国、新加坡、日本、韩国、加拿大和其他地区，如果你的机场某个地区节点比较多，可以参照业务分流组新增地区分类；
+# 根据自己使用习惯，策略组已将默认节点策略组放置在最前，便于每次更新订阅均不需重新选择策略组节点，可根据自己的情况对策略组的顺序做相应调整；
+# 在规则组中写有部分设备不代理，或部分设备指定域名走代理，其余直连的规则，根据个人情况修订或删除；
+# 规则组可根据自己的使用情况自行定制rules，比如加入自己经常使用的直连和需代理的域名或IP，加在现有rules的最前面，其他最好不要改动现有顺序，否则可能会影响使用效果。
+
+port: 3333
+# ========================
+# 机场订阅（可多个机场）
+# ========================
+proxies:
+proxy-providers:
+  机场名称:
+    type: http
+    url: https://oooooooooooooolt?clash=1&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
+    interval: 86400
+    health-check:
+      enable: true
+      url: http://www.apple.com/library/test/success.html
+      interval: 300
+      filter: "^((?!(建议|如果|教程|客户端)).)*$"  
+    override:
+      additional-prefix: "[机场名称]"
+
+# ========================
+# 节点策略组
+# ========================
+
+proxy-groups:
+  - name: 手动选择
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全部自动
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 台湾-自动
+      - 新加坡-自动
+      - 韩国-自动
+      - 英国-自动
+      - 流媒体-自动
+      - GPT-自动
+      - 其他-自动
+    filter: "^((?!(如果|教程|客户端)).)*$"
+
+  - name: 全部自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(如果|教程|客户端)).)*$"
+
+  - name: GitHub
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: YouTube
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+    type: select
+    proxies:
+
+      - 美国-自动
+      - 香港-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 谷歌FCM
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png"
+    type: select
+    proxies:
+      - 美国-自动
+      - 香港-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 谷歌服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    type: select
+    proxies:
+      - 美国-自动
+      - 香港-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: ChatGPT
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    type: select
+    proxies:
+      - GPT-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: AI服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png"
+    type: select
+    proxies:
+      - GPT-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 国外媒体
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 国外电商
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 即时通讯
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 社交媒体
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/talkatone.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: TikTok
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+    type: select
+    proxies:
+      - 新加坡-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Netflix
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+    type: select
+    proxies:
+      - 流媒体-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: DisneyPlus
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png"
+    type: select
+    proxies:
+      - 流媒体-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: HBO
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"
+    type: select
+    proxies:
+      - 流媒体-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: PrimeVideo
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video_1.png"
+    type: select
+    proxies:
+      - 流媒体-自动
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Spotify
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Copilot
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 苹果服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: AppleTV+
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Emby
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/emby.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Steam
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/steam.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 微软服务
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/microsoft-icon.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 游戏平台
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+      - 台湾-自动
+      - 韩国-自动
+      - 英国-自动
+      - GPT-自动
+      - 流媒体-自动
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Bahamut
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 台湾-自动
+      - 手动选择
+
+  - name: 非标端口
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 漏网之鱼
+
+  - name: 全球直连
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+    type: select
+    proxies:
+    - DIRECT
+
+  - name: 测速工具
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全球直连
+      - 手动选择
+    filter: "^((?!(如果|教程|客户端)).)*$"
+
+  - name: 漏网之鱼
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全球直连
+      - 手动选择
+    filter: "^((?!(如果|教程|客户端)).)*$"
+
+# ========================
+# 业务分流组
+# ========================
+
+  # 香港组
+  - name: 香港-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+ 
+  # 美国组
+  - name: 美国-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+
+  # 日本组
+  - name: 日本-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+
+  # 台湾组
+  - name: 台湾-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
+
+  # 新加坡组
+  - name: 新加坡-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
+
+  # 韩国组
+  - name: 韩国-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
+
+  # 英国组
+  - name: 英国-自动
+    icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/uk.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$"
+
+  # GPT组
+  - name: GPT-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(AI)).*$"
+
+  # 流媒体组
+  - name: 流媒体-自动
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(流媒体)).*$"
+
+  # 其他地区组
+  - name: 其他-自动
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/global-55.png"
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(建议|如果|教程|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).)*$"
+
+# ========================
+# 规则组
+# ========================
+
+rules:
+#  内网设备192.168.50.88走直连，设备192.168.50.8的部分域名（My_Proxy）走代理，其余直连
+  - SRC-IP-CIDR,192.168.50.88/32,DIRECT
+  - RULE-SET,My_Proxy,手动选择
+  - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+#  ———————————————————————
+  - GEOSITE,private,全球直连
+  - GEOIP,private,全球直连,no-resolve
+  - RULE-SET,My_Direct,全球直连
+  - RULE-SET,Custom_Direct_Classical,全球直连
+  - RULE-SET,Custom_Proxy_Classical,手动选择
+  - GEOSITE,google-cn,全球直连
+  - GEOSITE,category-games@cn,全球直连
+  - RULE-SET,Steam_CDN_Classical,全球直连
+  - GEOSITE,category-game-platforms-download,全球直连
+  - GEOSITE,category-public-tracker,全球直连
+  - GEOSITE,steam@cn,全球直连
+  - GEOSITE,apple@cn,全球直连
+  - GEOSITE,microsoft@cn,全球直连
+  - GEOSITE,nintendo@cn,全球直连
+  - GEOSITE,category-communication,即时通讯
+  - GEOSITE,category-social-media-!cn,社交媒体
+  - GEOSITE,openai,ChatGPT
+  - GEOSITE,anthropic,ChatGPT
+  - GEOSITE,xai,ChatGPT
+  - GEOSITE,bing,Copilot
+  - GEOSITE,category-ai-!cn,AI服务
+  - GEOSITE,github,GitHub
+  - GEOSITE,category-speedtest,测速工具
+  - GEOSITE,steam,Steam
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,apple-tvplus,AppleTV+
+  - GEOSITE,apple,苹果服务
+  - GEOSITE,microsoft,微软服务
+  - GEOSITE,googlefcm,谷歌FCM
+  - GEOSITE,google,谷歌服务
+  - GEOSITE,tiktok,TikTok
+  - GEOSITE,netflix,Netflix
+  - GEOSITE,disney,DisneyPlus
+  - GEOSITE,hbo,HBO
+  - GEOSITE,primevideo,PrimeVideo
+  - GEOSITE,category-emby,Emby
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,bahamut,Bahamut
+  - GEOSITE,category-games,游戏平台
+  - GEOSITE,category-entertainment,国外媒体
+  - GEOSITE,category-ecommerce,国外电商
+  - GEOSITE,gfw,手动选择
+  - GEOIP,telegram,即时通讯,no-resolve
+  - GEOIP,twitter,社交媒体,no-resolve
+  - GEOIP,facebook,社交媒体,no-resolve
+  - GEOIP,google,谷歌服务,no-resolve
+  - GEOIP,netflix,Netflix,no-resolve
+  - GEOSITE,cn,全球直连
+  - GEOIP,cn,全球直连,no-resolve
+  - RULE-SET,Custom_Port_Direct,非标端口
+  - MATCH,漏网之鱼
+rule-providers:
+  My_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
+    interval: 28800
+  My_Proxy:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Proxy.yaml
+    interval: 28800
+  Custom_Direct_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml
+    interval: 28800
+  Custom_Proxy_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml
+    interval: 28800
+  Steam_CDN_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
+    interval: 28800
+  Custom_Port_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
+    interval: 28800
