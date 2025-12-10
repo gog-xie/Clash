@@ -4,7 +4,7 @@
 
 <p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件，根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录，增加了个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
-<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、MerlinClash等系统使用😂</b></p>
+<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash等系统使用😂</b></p>
 
 ---
 
@@ -15,7 +15,7 @@
 
 - ## 相关订阅模板地址
 
-- ### Yaml模板（推荐）
+- ### OpenClash Yaml模板（推荐）
 
 #### 采用Fallback模式，用Subconverter订阅有时出现小毛病，尽可能用yaml配置文件导入，zashboard控制面板还相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
