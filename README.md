@@ -74,11 +74,18 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 https://github.com/gog-xie/clash/blob/main/CF/yaml/ClashVerge.yaml
 ```
 
-#### [MerlinClash模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml)
+#### [MerlinClash_FallBack模板地址：](https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash_FallBack.yaml)
 
 ```
-https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash.yaml
+https://github.com/gog-xie/clash/blob/main/CF/yaml/MerlinClash_FallBack.yaml
 ```
+
+#### [MerlinClash_Simple模板地址：](https://github.com/gog-xie/Clash/blob/main/CF/yaml/MerlinClash_Simple.yaml)
+
+```
+https://github.com/gog-xie/Clash/blob/main/CF/yaml/MerlinClash_Simple.yaml
+```
+
 <p align="center"> <b>MerlinClash GeoIP数量显示为0 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png" width="360" heiht="190"></div>
 
