@@ -612,9 +612,9 @@ proxy-groups:
 
 rules:
 #  内网设备192.168.50.88走直连，设备192.168.50.8的部分域名（My_Proxy）走代理，其余直连
-  - SRC-IP-CIDR,192.168.50.88/32,DIRECT
+  - SRC-IP-CIDR,192.168.50.88/32,DIRECT,no-resolve
   - RULE-SET,My_Proxy,手动选择
-  - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+  - SRC-IP-CIDR,192.168.50.8/32,DIRECT,no-resolve
 #  ———————————————————————
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
