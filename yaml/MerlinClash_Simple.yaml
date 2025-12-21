@@ -618,8 +618,10 @@ rules:
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
   - RULE-SET,My_Direct,全球直连
-  - RULE-SET,Custom_Direct_Classical,全球直连
-  - RULE-SET,Custom_Proxy_Classical,手动选择
+  - RULE-SET,Custom_Direct_Domain,全球直连
+  - RULE-SET,Custom_Direct_Classical_IP,全球直连
+  - RULE-SET,Custom_Proxy_Domain,手动选择
+  - RULE-SET,Custom_Proxy_Classical_IP,手动选择
   - GEOSITE,google-cn,全球直连
   - GEOSITE,category-games@cn,全球直连
   - RULE-SET,Steam_CDN_Classical,全球直连
@@ -666,26 +668,37 @@ rules:
   - GEOIP,cn,全球直连,no-resolve
   - RULE-SET,Custom_Port_Direct,非标端口
   - MATCH,漏网之鱼
+
 rule-providers:
-  My_Direct:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
-    interval: 28800
   My_Proxy:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Proxy.yaml
     interval: 28800
-  Custom_Direct_Classical:
+  My_Direct:
     type: http
     behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
     interval: 28800
-  Custom_Proxy_Classical:
+  Custom_Direct_Domain:
+    type: http
+    behavior: domain
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml
+    interval: 28800
+  Custom_Direct_Classical_IP:
     type: http
     behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml
+    interval: 28800
+  Custom_Proxy_Domain:
+    type: http
+    behavior: domain
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml
+    interval: 28800
+  Custom_Proxy_Classical_IP:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml
     interval: 28800
   Steam_CDN_Classical:
     type: http
