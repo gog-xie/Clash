@@ -50,7 +50,7 @@ proxy-groups:
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
     type: url-test
-    url: "https://cp.cloudflare.com/generate_204"
+    url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
     interval: 300
