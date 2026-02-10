@@ -121,6 +121,7 @@ payload:
   - DOMAIN-SUFFIX,gdstudio.org
   - DOMAIN-SUFFIX,koolcenter.com
   - DOMAIN-SUFFIX,jsdelivr.com
+  - DOMAIN-SUFFIX,jsdelivr.net
   
   - IP-CIDR,220.130.197.210/32,no-resolve
   - IP-CIDR,234.33.157.217/32,no-resolve
