@@ -13,7 +13,7 @@ proxy-providers:
       udp: true
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: https://www.gstatic.com/generate_204
       interval: 300
 
 # ————————————————————————
@@ -96,7 +96,7 @@ proxy-groups:
   - name: 手动选择
     icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
     type: select
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.gstatic.com/generate_204
     interval: 300
     include-all: true
     proxies:
@@ -117,7 +117,7 @@ proxy-groups:
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
     type: url-test
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.gstatic.com/generate_204
     include-all: true
     tolerance: 50
     interval: 300
