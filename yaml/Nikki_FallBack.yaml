@@ -1,0 +1,1157 @@
+# ————————————————————————
+# 机场订阅
+# ————————————————————————
+
+proxy-providers:
+  机场名称:
+    url: "机场订阅地址"
+    type: http
+    interval: 86400
+    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
+    override:
+      skip-cert-verify: true
+      udp: true
+    health-check:
+      enable: true
+      url: http://www.apple.com/library/test/success.html
+      interval: 300
+
+# ————————————————————————
+# 全局配置 
+# ————————————————————————
+mixed-port: 7890
+allow-lan: true
+bind-address: "*"
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+log-level: warning
+global-client-fingerprint: chrome
+keep-alive-idle: 600
+keep-alive-interval: 15
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# ————————————————————————
+# 嗅探
+# ————————————————————————
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+# ————————————————————————
+# 入站
+# ————————————————————————
+tun:
+  enable: true
+  # system/gvisor/mixed
+  stack: mixed
+  dns-hijack: ["any:53", "tcp://any:53"]
+  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
+  #device: nikki
+  #使用仅内核自行修改下面三项为true
+  auto-route: false
+  auto-redirect: false
+  auto-detect-interface: false
+
+# ————————————————————————
+# DNS模块
+# ————————————————————————
+dns:
+  enable: true
+  cache-algorithm: arc
+  listen: 0.0.0.0:1053
+  ipv6: false
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - "rule-set:fakeipfilter_domain"
+  default-nameserver:
+    - https://223.5.5.5/dns-query
+  proxy-server-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+# ========================
+# 策略组
+# ========================
+
+proxy-groups:
+  - name: 手动选择
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
+    type: select
+    url: http://www.apple.com/library/test/success.html
+    interval: 300
+    include-all: true
+    proxies:
+      - 全部自动
+      - 全球直连
+      - 香港-自动
+      - 美国-自动
+      - 日本-自动
+      - 台湾-自动
+      - 新加坡-自动
+      - 韩国-自动
+      - 英国-自动
+      - 流媒体-自动
+      - GPT-自动
+      - 其他-自动
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+
+  - name: 全部自动
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+
+  - name: GitHub
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png"
+    type: select
+    proxies:
+      - 香港-自动
+      - 香港-故转
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: YouTube
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png"
+    type: select
+    proxies:
+      - 美国-故转
+      - 美国-自动
+      - 香港-故转
+      - 香港-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 谷歌FCM
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/googlevpn.png"
+    type: select
+    proxies:
+      - 美国-故转
+      - 美国-自动
+      - 香港-故转
+      - 香港-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 谷歌服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Search.png"
+    type: select
+    proxies:
+      - 美国-故转
+      - 美国-自动
+      - 香港-故转
+      - 香港-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: ChatGPT
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    type: select
+    proxies:
+      - GPT-故转
+      - GPT-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: AI服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png"
+    type: select
+    proxies:
+      - GPT-故转
+      - GPT-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 国外媒体
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 国外电商
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/shopping.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 即时通讯
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/whatsapp.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: 社交媒体
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/talkatone.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: TikTok
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png"
+    type: select
+    proxies:
+      - 新加坡-故转
+      - 新加坡-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Netflix
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: DisneyPlus
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: HBO
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO_1.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: PrimeVideo
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video_1.png"
+    type: select
+    proxies:
+      - 流媒体-故转
+      - 流媒体-自动
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Spotify
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png"
+    type: select
+    proxies:
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+      - 全球直连
+
+  - name: Copilot
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 苹果服务
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: AppleTV+
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Emby
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/emby.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Steam
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/steam.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 微软服务
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/microsoft-icon.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: 游戏平台
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 香港-故转
+      - 香港-自动
+      - 美国-故转
+      - 美国-自动
+      - 日本-故转
+      - 日本-自动
+      - 新加坡-故转
+      - 新加坡-自动
+      - 台湾-故转
+      - 台湾-自动
+      - 韩国-故转
+      - 韩国-自动
+      - 英国-故转
+      - 英国-自动
+      - GPT-故转
+      - GPT-自动
+      - 流媒体-故转
+      - 流媒体-自动
+      - 其他-故转
+      - 其他-自动
+      - 手动选择
+      - 全部自动
+
+  - name: Bahamut
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bahamut.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 台湾-故转
+      - 手动选择
+
+  - name: 非标端口
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bypass.png"
+    type: select
+    proxies:
+      - 全球直连
+      - 漏网之鱼
+
+  - name: 全球直连
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+    type: select
+    proxies:
+    - DIRECT
+
+  - name: 测速工具
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全球直连
+      - 手动选择
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+
+  - name: 漏网之鱼
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png"
+    type: select
+    include-all: true
+    proxies:
+      - 全球直连
+      - 手动选择
+    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+
+# ========================
+# 业务分流组
+# ========================
+
+  # 香港组
+  - name: 香港-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 香港-手动
+      - 香港-自动
+  
+  - name: 香港-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+    
+  - name: 香港-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(建议|广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"
+ 
+  # 美国组
+  - name: 美国-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/America.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 美国-手动
+      - 美国-自动
+
+  - name: 美国-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+
+  - name: 美国-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States)).*$"
+
+  # 日本组
+  - name: 日本-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Japan.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 日本-手动
+      - 日本-自动
+
+  - name: 日本-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+
+  - name: 日本-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan)).*$"
+
+  # 台湾组
+  - name: 台湾-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Taiwan_China.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 台湾-手动
+      - 台湾-自动
+
+  - name: 台湾-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
+
+  - name: 台湾-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan)).*$"
+
+  # 新加坡组
+  - name: 新加坡-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Singapore.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 新加坡-手动
+      - 新加坡-自动
+
+  - name: 新加坡-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
+
+  - name: 新加坡-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广新|新加坡|SG|坡|狮城|🇸🇬|Singapore)).*$"
+
+  # 韩国组
+  - name: 韩国-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Korea.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 韩国-手动
+      - 韩国-自动
+
+  - name: 韩国-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
+
+  - name: 韩国-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea)).*$"
+
+  # 英国组
+  - name: 英国-故转
+    icon: "https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/uk.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 英国-手动
+      - 英国-自动
+
+  - name: 英国-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$"
+
+  - name: 英国-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).*$"
+
+  # GPT组
+  - name: GPT-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - GPT-手动
+      - GPT-自动
+
+  - name: GPT-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(AI)).*$"
+
+  - name: GPT-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(AI)).*$"
+
+  # 流媒体组
+  - name: 流媒体-故转
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Media.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 流媒体-手动
+      - 流媒体-自动
+
+  - name: 流媒体-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "(?=.*(流媒体)).*$"
+
+  - name: 流媒体-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "(?=.*(流媒体)).*$"
+
+  # 其他地区组
+  - name: 其他-故转
+    icon: "https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/global-55.png"
+    type: fallback
+    interval: 300
+    lazy: false
+    proxies:
+      - 其他-手动
+      - 其他-自动
+
+  - name: 其他-手动
+    icon: https://testingcf.jsdelivr.net/gh/ifanrBook/ClashConfig@main/icon/iconselect48.png
+    type: select
+    include-all: true
+    filter: "^((?!(建议|如果|教程|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).)*$"
+
+  - name: 其他-自动
+    icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cellular.png
+    type: url-test
+    include-all: true
+    tolerance: 50
+    interval: 300
+    filter: "^((?!(建议|如果|教程|客户端|广港|香港|HK|Hong Kong|🇭🇰|HongKong|广台|台湾|台灣|TW|Tai Wan|🇹🇼|🇨🇳|TaiWan|Taiwan|广日|日本|JP|川日|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|Japan|广新|新加坡|SG|坡|狮城|🇸🇬|Singapore|广韩|韩国|韓國|KR|首尔|春川|🇰🇷|Korea|广美|美|US|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|🇺🇸|United States|英国|英|伦敦|UK|United Kingdom|🇬🇧|London)).)*$"
+
+# ========================
+# 规则组
+# ========================
+
+rules:
+#  内网设备192.168.50.88走直连，设备192.168.50.8的部分域名（My_Proxy）走代理，其余直连（本小节为特殊需求，根据个人情况修订，不需要的删除即可）。
+  - SRC-IP-CIDR,192.168.50.88/32,DIRECT
+  - RULE-SET,My_Proxy,手动选择
+  - SRC-IP-CIDR,192.168.50.8/32,DIRECT
+#  ———————————————————————
+  - GEOSITE,private,全球直连
+  - GEOIP,private,全球直连,no-resolve
+  - RULE-SET,My_Direct,全球直连
+  - RULE-SET,Custom_Direct_Domain,全球直连
+  - RULE-SET,Custom_Direct_Classical_IP,全球直连
+  - RULE-SET,Custom_Proxy_Domain,手动选择
+  - RULE-SET,Custom_Proxy_Classical_IP,手动选择
+  - GEOSITE,google-cn,全球直连
+  - GEOSITE,category-games@cn,全球直连
+  - RULE-SET,Steam_CDN_Classical,全球直连
+  - GEOSITE,category-game-platforms-download,全球直连
+  - GEOSITE,category-public-tracker,全球直连
+  - GEOSITE,steam@cn,全球直连
+  - GEOSITE,apple@cn,全球直连
+  - GEOSITE,microsoft@cn,全球直连
+  - GEOSITE,nintendo@cn,全球直连
+  - GEOSITE,category-communication,即时通讯
+  - GEOSITE,category-social-media-!cn,社交媒体
+  - GEOSITE,openai,ChatGPT
+  - GEOSITE,anthropic,ChatGPT
+  - GEOSITE,xai,ChatGPT
+  - GEOSITE,bing,Copilot
+  - GEOSITE,category-ai-!cn,AI服务
+  - GEOSITE,github,GitHub
+  - GEOSITE,category-speedtest,测速工具
+  - GEOSITE,steam,Steam
+  - GEOSITE,youtube,YouTube
+  - GEOSITE,apple-tvplus,AppleTV+
+  - GEOSITE,apple,苹果服务
+  - GEOSITE,microsoft,微软服务
+  - GEOSITE,googlefcm,谷歌FCM
+  - GEOSITE,google,谷歌服务
+  - GEOSITE,tiktok,TikTok
+  - GEOSITE,netflix,Netflix
+  - GEOSITE,disney,DisneyPlus
+  - GEOSITE,hbo,HBO
+  - GEOSITE,primevideo,PrimeVideo
+  - GEOSITE,category-emby,Emby
+  - GEOSITE,spotify,Spotify
+  - GEOSITE,bahamut,Bahamut
+  - GEOSITE,category-games,游戏平台
+  - GEOSITE,category-entertainment,国外媒体
+  - GEOSITE,category-ecommerce,国外电商
+  - GEOSITE,gfw,手动选择
+  - GEOIP,telegram,即时通讯,no-resolve
+  - GEOIP,twitter,社交媒体,no-resolve
+  - GEOIP,facebook,社交媒体,no-resolve
+  - GEOIP,google,谷歌服务,no-resolve
+  - GEOIP,netflix,Netflix,no-resolve
+  - GEOSITE,cn,全球直连
+  - GEOIP,cn,全球直连,no-resolve
+  - RULE-SET,Custom_Port_Direct,非标端口
+  - MATCH,漏网之鱼
+
+rule-providers:
+  My_Proxy:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Proxy.yaml
+    interval: 28800
+  My_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
+    interval: 28800
+  Custom_Direct_Domain:
+    type: http
+    behavior: domain
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml
+    interval: 28800
+  Custom_Direct_Classical_IP:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml
+    interval: 28800
+  Custom_Proxy_Domain:
+    type: http
+    behavior: domain
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml
+    interval: 28800
+  Custom_Proxy_Classical_IP:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml
+    interval: 28800
+  Steam_CDN_Classical:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
+    interval: 28800
+  Custom_Port_Direct:
+    type: http
+    behavior: classical
+    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
+    interval: 28800
