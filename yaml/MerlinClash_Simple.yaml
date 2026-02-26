@@ -13,17 +13,28 @@ port: 3333
 # ========================
 proxies:
 proxy-providers:
-  机场名称:
+  Airport1:
     type: http
-    url: https://oooooooooooooolt?clash=1&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
+    url: https://xxxxxxxxxx&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
     health-check:
       enable: true
-      url: http://www.apple.com/library/test/success.html
+      url: https://www.gstatic.com/generate_204
       interval: 300
-      filter: "^((?!(建议|如果|教程|客户端)).)*$"  
+      filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$"  
     override:
-      additional-prefix: "[机场名称]"
+      additional-prefix: "[Airport1]"
+  Airport2:
+    type: http
+    url: https://xxxxxxxxxx&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$"  
+    override:
+      additional-prefix: "[Airport2]"
 
 # ========================
 # 节点策略组
@@ -52,7 +63,7 @@ proxy-groups:
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
     type: url-test
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.gstatic.com/generate_204
     include-all: true
     tolerance: 50
     interval: 300
