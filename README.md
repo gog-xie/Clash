@@ -16,7 +16,8 @@
 
 <p align="center"> <b>Zashboard控制面板效果 </b></p>
 <div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="360" heiht="190"></div>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard1.png?raw=true" width="360" heiht="190"></div> <div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard2.png?raw=true" width="360" heiht="190"></div>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard1.png?raw=true" width="720" heiht="380"></div> 
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard2.png?raw=true" width="720" heiht="380"></div>
 
 - ## 2 OpenClash订阅模板
 
