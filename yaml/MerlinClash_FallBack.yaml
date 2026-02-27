@@ -18,22 +18,22 @@ proxy-providers:
     type: http
     url: https://xxxxxxxxxx&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
+    filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$" 
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-      filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$"  
     override:
       additional-prefix: "[Airport1]"
   Airport2:
     type: http
     url: https://xxxxxxxxxx&flag=meta  #修改你的机场A订阅地址保留&flag=meta结尾
     interval: 86400
+    filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$"
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-      filter: "^((?!(建议|如果|教程|客户端|0.1x|x0.1)).)*$"  
     override:
       additional-prefix: "[Airport2]"
 
