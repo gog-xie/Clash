@@ -144,8 +144,3 @@ $	匹配字符串的结束
 34 IP地址：((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))
 
 
-<span style="color: red;">红色文字</span>
-<span style="color: green;">绿色文字</span>
-<span style="color: blue;">蓝色文字</span>
-<span style="color: #ff6600;">橙色文字（十六进制）</span>
-<span style="color: rgb(128, 0, 128);">紫色文字（RGB）</span>
