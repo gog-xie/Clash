@@ -1,7 +1,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "http://xxxxxx&flag=meta  #输入你的机场1订阅链接地址，一定要加上&flag=meta结尾，否则会过滤掉hy2节点"
+    url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
     type: http
     interval: 86400
     health-check:
