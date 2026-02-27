@@ -4,7 +4,8 @@
 
 <p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬的OpenClash配置文件，根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录，定制个人需求，如个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
-<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核的系统使用😂</b></p>
+<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核程序使用😂</b></p>
+<p align="center"><b>🥊本项目仅阐述订阅模板相关配置，各类程序的设置请自行查阅相关教程，如OpenClash建议参照Aethersailor大佬的配置教程🥊</b></p>
 
 ---
 - ## 1 前言
