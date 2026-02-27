@@ -12,15 +12,6 @@
 
 ***
 
-<p style="color: red;">测试文字</p>
-<span style="color: rgb(255,0,0);">另一种红色文字</span>
-<span style="color: red;">红色文字</span>
-<span style="color: green;">绿色文字</span>
-<span style="color: blue;">蓝色文字</span>
-<span style="color: #ff6600;">橙色文字（十六进制）</span>
-<span style="color: rgb(128, 0, 128);">紫色文字（RGB）</span>
-
-
 - ## 相关订阅模板地址
 
 - ### OpenClash Yaml模板（推荐）
