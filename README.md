@@ -1,10 +1,10 @@
-<h1 align="center"> ✈️Openclash<br>⠀<br>配置说明</h1>
+<h1 align="center"> ✈️Clash<br>⠀<br>配置说明</h1>
 
 ---
 
 <p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件，根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录，增加了个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
-<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash等系统使用😂</b></p>
+<p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash、Nikki等Mihome内核的系统使用😂</b></p>
 
 ---
 
