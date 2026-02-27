@@ -31,7 +31,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
 ```
 
 
-- ### ini配置订阅链接
+- ### OpenClash ini配置订阅链接
 #### [Custom_Clash：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
