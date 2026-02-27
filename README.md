@@ -14,13 +14,6 @@
 
 ***
 
-<p align="center"> <b>手机端Zashboard控制面板效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="360" heiht="190"></div>
-<p align="center"> <b>电脑端Zashboard控制面板局部效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard1.png?raw=true" width="720" heiht="380"></div>
-<p align="center"> <b>电脑端Zashboard控制面板分流策略组效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard2.png?raw=true" width="720" heiht="380"></div>
-
 - ## 2 OpenClash订阅模板
 
 - ### 2.1 Yaml模板（推荐）
@@ -127,3 +120,13 @@ rules:
                      
 ***
 
+<p align="center"> <b>手机端Zashboard控制面板效果 </b></p>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="360" heiht="190"></div>
+---
+
+<p align="center"> <b>电脑端Zashboard控制面板局部效果 </b></p>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard1.png?raw=true" width="720" heiht="380"></div>
+---
+
+<p align="center"> <b>电脑端Zashboard控制面板分流策略组效果 </b></p>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard2.png?raw=true" width="720" heiht="380"></div>
