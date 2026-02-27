@@ -1,14 +1,14 @@
-<h1 align="center"> ✈️基于mihomo内核的代理程序<br>⠀<br>配置说明</h1>
+<h1 align="center"> ✈️基于mihomo内核代理程序<br>⠀<br>配置说明</h1>
 
 ---
 
-<p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬配置文件，根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
-<p align="center"><b>🐜持续漏网之鱼🐟的维护补录，增加了个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
+<p align="center"><b>🚴‍♀️本项目基于Aethersailor大佬的OpenClash配置文件，根据个人上网习惯及机场特性微改🚴‍♀️</b></p>
+<p align="center"><b>🐜持续漏网之鱼🐟的维护补录，增加个人需求，如个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
 <p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核的系统使用😂</b></p>
 
 ---
 - ## 1 前言
-####     曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。
+#### <br>⠀<br>曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。
 
 ***
 
@@ -16,7 +16,7 @@
 
 - ### 2.1 Yaml模板（推荐）
 
-####     采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，用Zashboard控制面板相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
+#### <br>⠀<br>采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，用Zashboard控制面板相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
 #### [2.1.1 Fallback地区故转模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_FallBack.yaml)
 
