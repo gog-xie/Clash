@@ -16,7 +16,7 @@
 
 - ### 2.1 Yaml模板（推荐）
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，用Zashboard控制面板相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，而且可配置较为美观的Zashboard控制面板。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
 #### [2.1.1 Fallback地区故转模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_FallBack.yaml)
 
