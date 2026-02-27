@@ -12,9 +12,9 @@
 
 ***
 
-- ## 相关订阅模板地址
+- ## OpenClash订阅模板
 
-- ### OpenClash Yaml模板（推荐）
+- ### Yaml模板（推荐）
 
 #### 采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，用Zashboard控制面板相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
@@ -31,7 +31,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
 ```
 
 
-- ### OpenClash ini配置订阅链接
+- ### ini配置订阅
 #### [Custom_Clash：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
@@ -62,7 +62,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.ini
 ```
 
--  ## 其他系统订阅模板配置
+-  ## 其他系统yaml模板
 >   #### 若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
 >  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。但这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址即可：
 
