@@ -32,7 +32,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
 
 
 - ### 1.2 ini配置订阅
-#### [1.2.1 Custom_Clash：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
+#### [1.2.1 Custom_Clash订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 ```
 
-#### [1.2.2 Custom_Clash_Simple：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
+#### [1.2.2 Custom_Clash_Simple订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini
@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Simple.ini
 ```
 
-#### [1.2.3 Custom_Clash_FallBack：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
+#### [1.2.3 Custom_Clash_FallBack订阅链接](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini
