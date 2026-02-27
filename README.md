@@ -6,7 +6,7 @@
 <p align="center"><b>🐜持续漏网之鱼🐟的维护补录，定制个人需求，如个别内网设备指定域名代理，其余直连的特殊需求🐜</b></p>
 <p align="center"><b>😂规则模板可拓展至Windows Clash Verge、ASUS MerlinClash、OpenWrt Nikki、OpenClash等mihomo内核程序使用😂</b></p>
 <p align="center"><b>🥊本项目仅阐述订阅模板相关配置，各类程序的设置请自行查阅相关教程，如OpenClash建议参照 [Aethersailor大佬的配置教程](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)🥊</b></p>
-[Aethersailor大佬的配置教程](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)
+[2.1.1 Fallback地区故转模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_FallBack.yaml)
 ---
 - ## 1 前言
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。
