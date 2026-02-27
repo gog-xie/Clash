@@ -18,13 +18,13 @@
 
 #### 采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，用Zashboard控制面板相对美观。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [Fallback地区故转模板：](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml)
+#### [1.1.1 Fallback地区故转模板](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_FallBack.yaml
 ```
 
-#### [url-test地区自动模板：](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml)
+#### [1.1.2 url-test地区自动模板](https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
@@ -32,7 +32,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/GOG_Clash_Simple.yaml
 
 
 - ### 1.2 ini配置订阅
-#### [Custom_Clash：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
+#### [1.2.1 Custom_Clash：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.ini
@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash.
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash.ini
 ```
 
-#### [Custom_Clash_Simple：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
+#### [1.2.2 Custom_Clash_Simple：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_Simple.ini
@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_
 https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_Simple.ini
 ```
 
-#### [Custom_Clash_FallBack：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
+#### [1.2.3 Custom_Clash_FallBack：](https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini)
 
 ```
 https://raw.githubusercontent.com/gog-xie/clash/refs/heads/main/CF/Custom_Clash_FallBack.ini
@@ -67,25 +67,25 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 >  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用。但这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址即可：
 
 
-#### [ClashVerge模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge.yaml)
+#### [2.1.1 ClashVerge模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge.yaml
 ```
 
-#### [MerlinClash_FallBack模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml)
+#### [2.1.2 MerlinClash_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml
 ```
 
-#### [MerlinClash_Simple模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml)
+#### [2.1.3 MerlinClash_Simple模板](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml
 ```
 
-#### [Nikki_FallBack模板地址：](https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml)
+#### [2.1.4 Nikki_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml
