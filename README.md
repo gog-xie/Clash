@@ -87,7 +87,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml
 https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml
 ```
 
-#### [3.1.4 Nikki_FallBack模板（强烈推荐）](https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml)
+#### [3.1.4 Nikki_FallBack模板（推荐）](https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml)
 
 ```
 https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml
