@@ -33,8 +33,8 @@ secret: "123456"                    # 控制 API 访问密码
 # 机场订阅
 # ————————————————————————
 
-proxy-providers:                     # 代理订阅提供者配置
-  Airport1:                           # 自定义订阅名称
+proxy-providers:                     # 代理订阅配置
+  Airport1:                           # 机场1（自定义机场名称）
     url: "机场2订阅地址"               # 订阅下载地址1
     type: http                        # 订阅类型为 HTTP
     interval: 86400                   # 订阅更新间隔（秒）
@@ -52,7 +52,7 @@ proxy-providers:                     # 代理订阅提供者配置
       additional-prefix: "[Airport1]"  # 为节点名添加前缀
       additional-suffix: "Airport1"    # 为节点名添加后缀
 
-  Airport2:                           # 自定义订阅名称
+  Airport2:                           # 机场2（不能重名）
     url: "机场2订阅地址"               # 订阅下载地址2
     type: http                        # 订阅类型为 HTTP
     interval: 86400                   # 订阅更新间隔（秒）
