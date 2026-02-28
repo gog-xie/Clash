@@ -15,104 +15,99 @@
 # 端口设置
 # ————————————————————————
 
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
-
-allow-lan: true
-mode: rule
-log-level: info
-
-external-controller: 0.0.0.0:9090
-external-ui: ui
-external-ui-name: zashboard
-external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-secret: "123456"  # 设置zashboard面板的访问密码
+port: 7890                     # HTTP 代理端口
+socks-port: 7891               # SOCKS5 代理端口
+redir-port: 7892               # Redir 透明代理端口（iptables 转发）
+mixed-port: 7893               # HTTP + SOCKS 混合代理端口
+tproxy-port: 7895              # TProxy 透明代理端口
+allow-lan: true                # 允许局域网设备连接代理
+mode: rule                     # 运行模式：规则模式
+log-level: info                # 日志级别（info 信息级）
+external-controller: 0.0.0.0:9090   # 外部控制 API 监听地址和端口
+external-ui: ui                     # 外部 UI 文件目录
+external-ui-name: zashboard         # 使用的 Web UI 名称
+external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip  # UI 在线下载地址
+secret: "123456"                    # 控制 API 访问密码
 
 # ————————————————————————
 # 机场订阅
 # ————————————————————————
 
-proxy-providers:
-  机场名称:
-    url: "机场订阅地址"
-    type: http
-    interval: 86400
-    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
-    override:
-      skip-cert-verify: true
-      udp: true
-    health-check:
-      enable: true
-      url: http://www.apple.com/library/test/success.html
-      interval: 300
+proxy-providers:                     # 代理订阅提供者配置
+  机场名称:                           # 自定义订阅名称
+    url: "机场订阅地址"                # 订阅下载地址
+    type: http                        # 订阅类型为 HTTP
+    interval: 86400                   # 订阅更新间隔（秒）
+    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"   # 节点名称正则过滤规则
+    override:                         # 覆盖节点默认配置
+      skip-cert-verify: true          # 跳过证书验证
+      udp: true                       # 启用 UDP 支持
+    health-check:                     # 节点健康检查设置
+      enable: true                    # 启用健康检查
+      url: http://www.apple.com/library/test/success.html   # 健康检查测试地址
+      interval: 300                   # 健康检查间隔（秒）
 
 # ————————————————————————
-# DNS 设置
+# DNS 设置 
 # ————————————————————————
 
-dns:
-  enable: true
-  listen: 0.0.0.0:7874
-  ipv6: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.20.0.1/16
-  nameserver:
-    - 223.5.5.5
-# 可填写当地运营商DNS，如四川电信DNS：218.6.200.139和202.98.96.68
-  fake-ip-filter:
-    - +.lan
-    - +.local
-    - geosite:cn
-    - +.ifaner.dd94wan.com
-
-ipv6: true
+dns:                                 # DNS 模块配置
+  enable: true                       # 启用内置 DNS
+  listen: 0.0.0.0:7874               # DNS 监听地址和端口
+  ipv6: true                         # DNS 支持 IPv6 查询
+  enhanced-mode: fake-ip             # 增强模式：fake-ip 模式
+  fake-ip-range: 198.20.0.1/16       # fake-ip 地址池范围
+  nameserver:                        # 上游 DNS 服务器
+    - 223.5.5.5                      # 阿里 DNS 服务器
+  fake-ip-filter:                    # fake-ip 排除列表
+    - +.lan                          # 排除局域网域名
+    - +.local                        # 排除本地域名
+    - geosite:cn                     # 排除中国大陆域名
+    - +.ifaner.dd94wan.com           # 排除指定域名
+ipv6: true                           # 全局启用 IPv6
 
 # ————————————————————————
 # 运行模式——TUN 模块设置
 # ————————————————————————
 
-tun:
-  enable: true
-  stack: gvisor
-  device: utun
-  endpoint-independent-nat: true
-  auto-route: false
-  auto-detect-interface: false
-  auto-redirect: false
-  strict-route: false
-
-profile:
-  store-selected: true
-  store-fake-ip: true
+tun:                                 # TUN 模块配置
+  enable: true                       # 启用 TUN 模式
+  stack: gvisor                      # 使用 gvisor 网络栈
+  device: utun                       # TUN 虚拟设备名称
+  endpoint-independent-nat: true     # 启用独立 NAT 映射
+  auto-route: false                  # 不自动添加路由
+  auto-detect-interface: false       # 不自动检测网络接口
+  auto-redirect: false               # 不自动添加重定向规则
+  strict-route: false                # 不启用严格路由模式
+profile:                             # 配置持久化设置
+  store-selected: true               # 记住策略组选择
+  store-fake-ip: true                # 保存 fake-ip 映射关系
 
 # ========================
 # 数据库
 # ========================
 
-geox-url:
-  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb
-  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
-  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
-  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
-geo-auto-update: true 
-geo-update-interval: 24 
-geodata-mode: true
+geox-url:                            # GEO 数据下载地址
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb   # 国家 IP 数据库地址
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat   # GeoIP 数据文件地址
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat # GeoSite 数据文件地址
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb        # ASN 数据库地址
+geo-auto-update: true                # 启用 GEO 数据自动更新
+geo-update-interval: 24              # GEO 更新间隔（小时）
+geodata-mode: true                   # 启用 geodata 规则模式
 
 # ========================
 # 分流策略组
 # ========================
 
-proxy-groups:
-  - name: 手动选择
-    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"
-    type: select
-    url: http://www.apple.com/library/test/success.html
-    interval: 300
-    include-all: true
-    proxies:
+proxy-groups:                                  # 策略组配置开始
+  - name: 手动选择                              # 策略组名称：手动选择
+    icon: "https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"  # 策略组显示图标地址
+    type: select                               # 策略组类型：手动选择模式
+    url: http://www.apple.com/library/test/success.html   # 延迟测试使用的检测地址
+    interval: 300                              # 延迟测试间隔（秒）
+    include-all: true                          # 自动包含所有节点
+    proxies:                                   # 手动指定节点列表
       - 全部自动
       - 全球直连
       - 香港-自动
@@ -125,7 +120,7 @@ proxy-groups:
       - 流媒体-自动
       - GPT-自动
       - 其他-自动
-    filter: "^((?!(建议|如果|教程|客户端)).)*$"
+    filter: "^((?!(建议|如果|教程|客户端)).)*$" # 节点名称正则过滤规则
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
@@ -824,12 +819,12 @@ proxy-groups:
 # ========================
 
   # 香港组
-  - name: 香港-故转
-    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"
-    type: fallback
-    interval: 300
-    lazy: false
-    proxies:
+  - name: 香港-故转                              # 策略组名称：香港-故障转移
+    icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/Hongkong.png"  # 策略组显示图标地址
+    type: fallback                             # 策略组类型：故障转移模式（按顺序切换）
+    interval: 300                              # 健康检测间隔（秒）
+    lazy: false                                # 不启用懒检测（启动后立即检测）
+    proxies:                                   # 故障转移节点列表
       - 香港-手动
       - 香港-自动
   
