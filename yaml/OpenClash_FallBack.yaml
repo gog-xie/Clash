@@ -34,8 +34,8 @@ secret: "123456"                    # 控制 API 访问密码
 # ————————————————————————
 
 proxy-providers:                     # 代理订阅提供者配置
-  机场名称:                           # 自定义订阅名称
-    url: "机场订阅地址"                # 订阅下载地址
+  Airport1:                           # 自定义订阅名称
+    url: "机场2订阅地址"               # 订阅下载地址1
     type: http                        # 订阅类型为 HTTP
     interval: 86400                   # 订阅更新间隔（秒）
     filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"   # 节点名称正则过滤规则
@@ -46,6 +46,29 @@ proxy-providers:                     # 代理订阅提供者配置
       enable: true                    # 启用健康检查
       url: http://www.apple.com/library/test/success.html   # 健康检查测试地址
       interval: 300                   # 健康检查间隔（秒）
+    override:                         # 覆写节点配置
+      skip-cert-verify: true          # 跳过证书验证
+      udp: true                       # 启用UDP
+      additional-prefix: "[Airport1]"  # 为节点名添加前缀
+      additional-suffix: "Airport1"    # 为节点名添加后缀
+
+  Airport2:                           # 自定义订阅名称
+    url: "机场2订阅地址"               # 订阅下载地址2
+    type: http                        # 订阅类型为 HTTP
+    interval: 86400                   # 订阅更新间隔（秒）
+    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"   # 节点名称正则过滤规则
+    override:                         # 覆盖节点默认配置
+      skip-cert-verify: true          # 跳过证书验证
+      udp: true                       # 启用 UDP 支持
+    health-check:                     # 节点健康检查设置
+      enable: true                    # 启用健康检查
+      url: http://www.apple.com/library/test/success.html   # 健康检查测试地址
+      interval: 300                   # 健康检查间隔（秒）
+    override:                         # 覆写节点配置
+      skip-cert-verify: true          # 跳过证书验证
+      udp: true                       # 启用UDP
+      additional-prefix: "[Airport2]"  # 为节点名添加前缀（自定义）
+      additional-suffix: "Airport2"    # 为节点名添加后缀（自定义）
 
 # ————————————————————————
 # DNS 设置 
