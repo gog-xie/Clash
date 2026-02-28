@@ -9,9 +9,24 @@
 # 规则组可根据自己的使用情况自行定制rules，比如加入自己经常使用的直连和需代理的域名或IP，加在现有rules的最前面，其他最好不要改动现有顺序，否则可能会影响使用效果。
 
 port: 3333
+
+# ========================
+# 数据库
+# ========================
+
+geox-url:
+  mmdb: https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/Country.mmdb
+  geoip: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+  geosite: https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+  asn: https://testingcf.jsdelivr.net/gh/xishang0128/geoip@release/GeoLite2-ASN.mmdb
+geo-auto-update: true 
+geo-update-interval: 24 
+geodata-mode: true
+
 # ========================
 # 机场订阅（可多个机场）
 # ========================
+
 proxies:
 proxy-providers:
   Airport1:
