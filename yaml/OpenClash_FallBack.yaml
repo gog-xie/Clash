@@ -147,7 +147,7 @@ proxy-groups:                                  # 策略组配置开始
 
   - name: 全部自动
     icon: "https://testingcf.jsdelivr.net/gh/Lanlan13-14/Rules@main/icon/automation2.png"
-    type: url-test
+    type: url-test                           # 策略组类型：自动选择模式
     url: http://www.apple.com/library/test/success.html
     include-all: true
     tolerance: 50
@@ -1147,6 +1147,10 @@ rules:
   - GEOIP,cn,全球直连,no-resolve
   - RULE-SET,Custom_Port_Direct,非标端口
   - MATCH,漏网之鱼
+
+# ========================
+# 自定义规则集
+# ========================
 
 rule-providers:
   My_Proxy:
