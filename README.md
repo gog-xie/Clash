@@ -120,9 +120,8 @@ rules:
                      
 ***
 
----
 <p align="center"> <b>手机端Zashboard控制面板效果 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="360" heiht="190"></div>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard3.png?raw=true" width="180" heiht="270"></div>
 
 ---
 
