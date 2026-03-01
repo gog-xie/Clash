@@ -137,4 +137,6 @@ rules:
 ---
 
 <p align="center"> <b>电脑端Zashboard控制面板连接列表 </b></p>
-<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard4.png" width="720" heiht="380"></div>
+<div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/zashboard4.png" width="1080" heiht="760"></div>
+
+---
