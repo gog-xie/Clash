@@ -66,8 +66,8 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 ```
 
 -  ## 3 其他系统yaml模板
->   #### 若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
->  * 在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用，导入Nikki时注意需带相关设置参数。这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址和名称即可：
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若主路由为华硕硬路由，配置MerlinClash订阅规则完全可借鉴OpenClash的订阅模板，可直接导入模板使用或稍加改动即可。
+  * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用，导入Nikki时注意需带相关设置参数。这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址和名称即可：
 
 
 #### [3.1.1 ClashVerge_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge_FallBack.yaml)
@@ -98,7 +98,7 @@ https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml
 <div align="center"> <img src="https://github.com/gog-xie/Clash/blob/main/pic/clash/merlinclash%E5%86%85%E7%BD%AE%E8%A7%84%E5%88%99%E8%B0%83%E7%94%A8.png" width="360" heiht="190"></div>
 
 -  ## 4 特殊需求
->  * 在OpenClash、Nikki或MerlinClash系统中，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要代理设备的网关指向旁路由，不需代理的默认指向主路由即可；但也有设备仅少量代理需求，其余不走科学代理，或openclash安装在主路由情况下部分设备不走科学代理。特别是前者比较特殊，既要少量代理，又要大部分直连，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况（主要是群晖按普通规则代理后，经常性的产生不必要的代理流量，实际上是不需要的），可以利用规则先后顺序正则匹配的特点来实现部分代理其他不代理，按先后顺序匹配指令，如果没有匹配上，再去匹配下一项规则。根据这一特点，先将这类设备IP 与MAC地址绑定，再让不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连。把这三项放规则集的最前端即可，例如以下规则：内网设备192.168.50.88走直连，设备192.168.50.98的部分域名（My_Proxy）走代理，其余走直连。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在OpenClash、Nikki或MerlinClash系统中，常常有部分设备不需要科学代理，旁路由比较好设置，只需让需要代理设备的网关指向旁路由，不需代理的默认指向主路由即可；但也有设备仅少量代理需求，其余不走科学代理，或openclash安装在主路由情况下部分设备不走科学代理。特别是前者比较特殊，既要少量代理，又要大部分直连，比如白群仅docker镜像库、Emby海报刮削需要科学代理，其余全部绕过内核走直连的情况（主要是群晖按普通规则代理后，经常性的产生不必要的代理流量，实际上是不需要的），可以利用规则先后顺序正则匹配的特点来实现部分代理其他不代理，按先后顺序匹配指令，如果没有匹配上，再去匹配下一项规则。根据这一特点，先将这类设备IP 与MAC地址绑定，再让不需代理的设备IP匹配走直连，其次让部分需要代理的设备IP 匹配Proxy规则，最后让部分需要代理的设备IP匹配走直连。把这三项放规则集的最前端即可，例如以下规则：内网设备192.168.50.88走直连，设备192.168.50.98的部分域名（My_Proxy）走代理，其余走直连。
 
 ```
 rules:
