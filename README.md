@@ -9,8 +9,8 @@
 ---
 
 - ## 1 前言
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有很多途径可实现科学上网，代理程序部署在旁路由比较多人的选择模式，但时而会出现莫名的小问题，DHCP也有不便之处。其实家庭网络简单好用即可，试过仅一台华硕硬路由满足家庭上网需求，科学上网安装了Merlinclash，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果还是挺好！但对路由硬件要求较高，试用BE86U开启MerlinClash后也会偶尔卡死自动重启。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过试用ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；旁路由部署在NAS或其他虚拟环境下，需经常性的关机，部署在主路由上比较合适（OpenClash、Nikki或merlinclash均可）；科学上网需求不大的，在终端电脑上安装类似ClashVerge的代理程序，随用随开。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;科学上网有很多途径，比较多人选择代理程序部署在旁路由，但旁路由时而会出现莫名的小问题，DHCP也有不便之处。其实家庭网络简单好用即可，试过仅一台华硕硬路由满足家庭上网需求，安装Merlinclash，实现国内外科学分流，沿用了Openclash的配置文件，效果还是挺好！但对路由硬件要求较高，试用BE86U开启MerlinClash后也会偶尔卡死自动重启。另外，广告拦截尽量不要放置在代理程序中，在终端安装例如AdGuard插件效果远远好于诸如OpenClash的广告拦截效果。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过试用ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（一般为7×24小时开机的独立旁路由），使用OpenClash、Nikki等比较稳定；旁路由部署在NAS或其他虚拟环境下，需经常性的开关机，部署在主路由上比较合适（OpenClash、Nikki或merlinclash等）；科学上网需求不大的，在终端电脑上安装类似ClashVerge的代理程序，随用随开。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目主要是相关订阅模板的下载，各代理程序的设置请自行查阅相关教程，如OpenClash的设置建议参照 [Aethersailor](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)大佬的设置方案🥊。
 
 ***
