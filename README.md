@@ -107,7 +107,7 @@ rules:
 - SRC-IP-CIDR,192.168.50.98/32,DIRECT
 ......
 ```
->  * 如果只有有少量的代理需求，可直接写域名或IP规则匹配：
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果只有有少量的代理需求，可直接写域名或IP规则匹配：
 ```
 rules:
 - SRC-IP-CIDR,192.168.50.88/32,DIRECT
