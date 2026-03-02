@@ -9,7 +9,7 @@
 ---
 
 - ## 1 前言
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾用Openwrt旁路由科学上网，旁路由存在诸多问题，且使用多有不便。家庭网络简单好用即可，改为仅一台华硕硬路由满足家庭上网需求，安装了Merlinclash科学上网，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果接近无感！至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Openwrt旁路由科学上网，旁路由存在时而出现小问题，DHCP也有不便之处。其实家庭网络简单好用即可，试过仅一台华硕硬路由满足家庭上网需求，科学上网安装了Merlinclash，而在Merlinclash中不易配置分流规则，沿用了Openclash的配置文件，效果还是挺好！但对路由硬件要求较高，BE86U开启MerlinClash后仍然存在偶尔卡死自动重启的情况。至于广告拦截，在终端安装例如AdGuard插件效果远远好于OpenClash的效果，故可以在硬路由或终端上安装相关插件。通过试用ClashVerge、MerlinClash、OpenClash、Nikki等代理程序，各种程序在不同的硬件和网络环境各有优劣：有稳定的旁路由（7×24小时开机），使用OpenClash、Nikki比较稳定；旁路由部署在NAS或其他虚拟环境下，需经常性的关机，部署在主路由上比较合适（OpenClash、Nikki或merlinclash均可）；科学上网需求不大的，在终端电脑上用ClashVerge最为稳定。
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本项目主要是相关订阅模板的下载，各代理程序的设置请自行查阅相关教程，如OpenClash的设置建议参照 [Aethersailor](https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88)大佬的设置方案🥊。
 
 ***
