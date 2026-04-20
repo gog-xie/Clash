@@ -27,6 +27,8 @@ proxy-providers:
       interval: 300
     override:
       additional-prefix: "[Airport1]"
+    proxy: 直连
+    
   Airport2:
     type: http
     url: https://xxxxxxxxxx&flag=meta  #如果订阅节点不成功，在你的机场A订阅地址保留&flag=meta结尾
@@ -38,6 +40,7 @@ proxy-providers:
       interval: 300
     override:
       additional-prefix: "[Airport2]"
+    proxy: 直连   
 
 proxies:
   - {name: 直连, type: direct}
