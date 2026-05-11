@@ -4,49 +4,52 @@
 
 proxy-providers:
   Airport1:
-    url: https://xxxxxxxxxx&flag=meta  #输入你的机场1订阅链接地址，一定要加上&flag=meta结尾，否则会过滤掉hy2节点
+    url: https://xxxxxxxxxx&flag=meta  #输入你的机场1订阅链接地址，根据自己机场情况是否加上&flag=meta结尾，否则会过滤掉某些节点
     type: http
     interval: 86400
-    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
+    filter: "^((?!(报错|特殊|测试|如果|导致|教程|更新一下|0.1x)).)*$"
     override:
       skip-cert-verify: true
       udp: true
+#      additional-prefix: "[test]" # 为节点名添加前缀
+#      additional-suffix: "[test]" # 为节点名添加后缀
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    override:
-      additional-prefix: "[Airport1]"
+    proxy: Direct
   
   Airport2:
-    url: https://xxxxxxxxxx&flag=meta  #机场2订阅链接
+    url: https://xxxxxxxxxx&flag=meta
     type: http
     interval: 86400
-    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
+    filter: "^((?!(报错|特殊|测试|如果|导致|教程|更新一下|0.1x)).)*$"
     override:
       skip-cert-verify: true
       udp: true
+#      additional-prefix: "[test]" # 为节点名添加前缀
+#      additional-suffix: "[test]" # 为节点名添加后缀
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    override:
-      additional-prefix: "[Airport2]"
+    proxy: Direct
 
   Airport3:
-    url: https://xxxxxxxxxx&flag=meta  #机场3订阅链接
+    url: https://xxxxxxxxxx&flag=meta
     type: http
     interval: 86400
-    filter: "^((?!(建议|如果|教程|客户端|X0.1)).)*$"
+    filter: "^((?!(报错|特殊|测试|如果|导致|教程|更新一下|0.1x)).)*$"
     override:
       skip-cert-verify: true
       udp: true
+#      additional-prefix: "[test]" # 为节点名添加前缀
+#      additional-suffix: "[test]" # 为节点名添加后缀
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    override:
-      additional-prefix: "[Airport3]"
+    proxy: Direct
 
 # ————————————————————————
 # 全局配置 
@@ -1107,17 +1110,18 @@ rules:
 #  - RULE-SET,My_Proxy,手动选择
 #  - SRC-IP-CIDR,192.168.50.98/32,DIRECT,no-resolve
 #  ———————————————————————
-
   - GEOSITE,private,全球直连
   - GEOIP,private,全球直连,no-resolve
   - RULE-SET,My_Direct,全球直连
   - RULE-SET,Custom_Direct_Domain,全球直连
-  - RULE-SET,Custom_Direct_Classical_IP,全球直连
+  - RULE-SET,Custom_Direct_IP,全球直连
+  - RULE-SET,Custom_Direct_Port,全球直连
   - RULE-SET,Custom_Proxy_Domain,手动选择
-  - RULE-SET,Custom_Proxy_Classical_IP,手动选择
+  - RULE-SET,Custom_Proxy_IP,手动选择
   - GEOSITE,google-cn,全球直连
   - GEOSITE,category-games@cn,全球直连
-  - RULE-SET,Steam_CDN_Classical,全球直连
+  - RULE-SET,Steam_CDN_Domain,全球直连
+  - RULE-SET,Steam_CDN_IP,全球直连
   - GEOSITE,category-game-platforms-download,全球直连
   - GEOSITE,category-public-tracker,全球直连
   - GEOSITE,steam@cn,全球直连
@@ -1168,38 +1172,68 @@ rule-providers:
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Proxy.yaml
     interval: 28800
+    format: yaml
+
   My_Direct:
     type: http
     behavior: classical
     url: https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/rule/My_Direct.yaml
     interval: 28800
-  Custom_Direct_Domain:
-    type: http
-    behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.yaml
-    interval: 28800
-  Custom_Direct_Classical_IP:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_IP.yaml
-    interval: 28800
-  Custom_Proxy_Domain:
-    type: http
-    behavior: domain
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.yaml
-    interval: 28800
-  Custom_Proxy_Classical_IP:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical_IP.yaml
-    interval: 28800
-  Steam_CDN_Classical:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml
-    interval: 28800
+    format: yaml
+
   Custom_Port_Direct:
-    type: http
-    behavior: classical
-    url: https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml
+    behavior: classical  # 混合类型（包含多种规则）
     interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml"
+    format: yaml
+
+  Custom_Direct_Domain:
+    behavior: domain  # 仅域名
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Domain.mrs"
+    format: mrs  # 二进制格式
+
+  Custom_Direct_IP:
+    behavior: ipcidr  # 仅 IP
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_IP.mrs"
+    format: mrs  # 二进制格式
+
+  Custom_Direct_Port:
+    behavior: classical  # 混合类型（包含多种规则）
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical_Port.yaml"
+    format: yaml
+
+  Custom_Proxy_Domain:
+    behavior: domain  # 仅域名
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Domain.mrs"
+    format: mrs  # 二进制格式
+
+  Custom_Proxy_IP:
+    behavior: ipcidr  # 仅 IP
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_IP.mrs"
+    format: mrs  # 二进制格式
+
+  Steam_CDN_Domain:
+    behavior: domain  # Steam CDN下载服务器（直连获得更快速度）
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Domain.mrs"
+    format: mrs  # 二进制格式
+
+  Steam_CDN_IP:
+    behavior: ipcidr  # Steam CDN下载服务器（直连获得更快速度）
+    interval: 28800
+    type: http
+    url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_IP.mrs"
+    format: mrs  # 二进制格式
+
