@@ -103,9 +103,9 @@ rules:
 - SRC-IP-CIDR,192.168.1.192/29,DIRECT,no-resolve
 
 # 内网设备192.168.1.88走直连，设备192.168.1.98的部分域名（My_Proxy）走代理，其余走直连
-- SRC-IP-CIDR,192.168.1.88/32,DIRECT
+- SRC-IP-CIDR,192.168.1.88/32,DIRECT,no-resolve
 - RULE-SET,My_Proxy,手动选择
-- SRC-IP-CIDR,192.168.1.98/32,DIRECT
+- SRC-IP-CIDR,192.168.1.98/32,DIRECT,no-resolve
 ......
 
 ```
