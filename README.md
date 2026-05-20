@@ -20,17 +20,13 @@
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;采用Subconverter订阅时有小毛病出现，用yaml配置文件导入可减少小问题，而且可配置较为美观的Zashboard控制面板。下载yaml文件后只需输入机场名称和机场订阅地址后导入OpenClash即可。
 
-#### [2.1.1 Fallback地区故转模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_FallBack.yaml)
+#### [2.1.1 综合模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash/MihomoGOG)
 
 ```
-https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash/MihomoGOG
 ```
 
-#### [2.1.2 url-test地区自动模板](https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_Simple.yaml)
 
-```
-https://github.com/gog-xie/Clash/blob/main/yaml/OpenClash_Simple.yaml
-```
 
 
 - ### 2.2 Sub订阅转换ini链接
@@ -69,23 +65,18 @@ https://testingcf.jsdelivr.net/gh/gog-xie/clash@main/CF/Custom_Clash_FallBack.in
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在OpenClash配置订阅中的规则集选择“启用”，避免yaml文件太大影响速度，再到配置管理中下载yaml配置文件导入Merlinclash中可直接使用。目前Merlinclash中GoeIP数据库数量为0，官方解释为“mmdb等格式的geo文件无法统计数量”，但GoeSite和GoeIP数据正常调用，使用效果不受影响。同理，也可导入Windows Clash Verge中使用，导入Nikki时注意需带相关设置参数。这里推荐使用以下yaml文件，仅需修改yaml文件中的机场地址和名称即可：
 
 
-#### [3.1.1 ClashVerge_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge_FallBack.yaml)
+#### [3.1.1 ClashVerge_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge/ClashVerge_FallBack.yaml)
 
 ```
-https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/ClashVerge/ClashVerge_FallBack.yaml
 ```
 
-#### [3.1.2 MerlinClash_FallBack模板](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml)
+#### [3.1.2 MerlinClash综合模板](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash/GOGAIO)
 
 ```
-https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_FallBack.yaml
+https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash/GOGAIO
 ```
 
-#### [3.1.3 MerlinClash_Simple模板](https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml)
-
-```
-https://github.com/gog-xie/Clash/blob/main/yaml/MerlinClash_Simple.yaml
-```
 
 #### [3.1.4 Nikki_FallBack模板（推荐）](https://github.com/gog-xie/Clash/blob/main/yaml/Nikki_FallBack.yaml)
 
